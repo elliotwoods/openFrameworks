@@ -26,9 +26,9 @@ typedef ofPixels & ofPixelsRef;
 enum ofImageType: short;
 enum ofPixelFormat: short;
 
-int ofGetGLInternalFormat(const ofPixels & pixels);
-int ofGetGLInternalFormat(const ofShortPixels & pixels);
-int ofGetGLInternalFormat(const ofFloatPixels & pixels);
+int OF_API_ENTRY ofGetGLInternalFormat(const ofPixels & pixels);
+int OF_API_ENTRY ofGetGLInternalFormat(const ofShortPixels & pixels);
+int OF_API_ENTRY ofGetGLInternalFormat(const ofFloatPixels & pixels);
 
 OF_DEPRECATED_MSG("Use ofGetGLInternalFormat() instead", int ofGetGlInternalFormat(const ofPixels & pixels));
 OF_DEPRECATED_MSG("Use ofGetGLInternalFormat() instead", int ofGetGlInternalFormat(const ofShortPixels & pixels));
@@ -37,62 +37,62 @@ OF_DEPRECATED_MSG("Use ofGetGLInternalFormat() instead", int ofGetGlInternalForm
 //---------------------------------
 // this is helpful for debugging ofTexture
 
-std::string ofGetGLInternalFormatName(int glInternalFormat);
-int ofGetGLFormatFromInternal(int gInternalFormat);
-int ofGetGLTypeFromInternal(int glInternalFormat);
+std::string OF_API_ENTRY ofGetGLInternalFormatName(int glInternalFormat);
+int OF_API_ENTRY ofGetGLFormatFromInternal(int gInternalFormat);
+int OF_API_ENTRY ofGetGLTypeFromInternal(int glInternalFormat);
 
 OF_DEPRECATED_MSG("Use ofGetGLInternalFormatName() instead", std::string ofGetGlInternalFormatName(int glInternalFormat));
 OF_DEPRECATED_MSG("Use ofGetGLTypeFromInternal() instead", int ofGetGlTypeFromInternal(int glInternalFormat));
 
-std::shared_ptr<ofBaseGLRenderer> ofGetGLRenderer();
+std::shared_ptr<ofBaseGLRenderer> OF_API_ENTRY ofGetGLRenderer();
 
-int ofGetGLType(const ofPixels & pixels);
-int ofGetGLType(const ofShortPixels & pixels);
-int ofGetGLType(const ofFloatPixels & pixels);
+int OF_API_ENTRY ofGetGLType(const ofPixels & pixels);
+int OF_API_ENTRY ofGetGLType(const ofShortPixels & pixels);
+int OF_API_ENTRY ofGetGLType(const ofFloatPixels & pixels);
 
 OF_DEPRECATED_MSG("Use ofGetGLType() instead", int ofGetGlType(const ofPixels & pixels));
 OF_DEPRECATED_MSG("Use ofGetGLType() instead", int ofGetGlType(const ofShortPixels & pixels));
 OF_DEPRECATED_MSG("Use ofGetGLType() instead", int ofGetGlType(const ofFloatPixels & pixels));
 
-ofImageType ofGetImageTypeFromGLType(int glType);
+ofImageType OF_API_ENTRY ofGetImageTypeFromGLType(int glType);
 
-GLuint ofGetGLPolyMode(ofPolyRenderMode m);
-ofPolyRenderMode ofGetOFPolyMode(GLuint m);
+GLuint OF_API_ENTRY ofGetGLPolyMode(ofPolyRenderMode m);
+ofPolyRenderMode OF_API_ENTRY ofGetOFPolyMode(GLuint m);
 
-GLuint ofGetGLPrimitiveMode(ofPrimitiveMode mode);
-ofPrimitiveMode ofGetOFPrimitiveMode(GLuint mode);
+GLuint OF_API_ENTRY ofGetGLPrimitiveMode(ofPrimitiveMode mode);
+ofPrimitiveMode OF_API_ENTRY ofGetOFPrimitiveMode(GLuint mode);
 
-int ofGetGLInternalFormatFromPixelFormat(ofPixelFormat pixelFormat);
-int ofGetGLFormatFromPixelFormat(ofPixelFormat pixelFormat);
-int ofGetBytesPerChannelFromGLType(int glType);
-int ofGetNumChannelsFromGLFormat(int glFormat);
-void ofSetPixelStoreiAlignment(GLenum pname, int w, int bpc, int numChannels);
-void ofSetPixelStoreiAlignment(GLenum panme, int stride);
+int OF_API_ENTRY ofGetGLInternalFormatFromPixelFormat(ofPixelFormat pixelFormat);
+int OF_API_ENTRY ofGetGLFormatFromPixelFormat(ofPixelFormat pixelFormat);
+int OF_API_ENTRY ofGetBytesPerChannelFromGLType(int glType);
+int OF_API_ENTRY ofGetNumChannelsFromGLFormat(int glFormat);
+void OF_API_ENTRY ofSetPixelStoreiAlignment(GLenum pname, int w, int bpc, int numChannels);
+void OF_API_ENTRY ofSetPixelStoreiAlignment(GLenum panme, int stride);
 
-std::vector<std::string> ofGLSupportedExtensions();
-bool ofGLCheckExtension(std::string searchName);
-bool ofGLSupportsNPOTTextures();
+std::vector<std::string> OF_API_ENTRY ofGLSupportedExtensions();
+bool OF_API_ENTRY ofGLCheckExtension(std::string searchName);
+bool OF_API_ENTRY ofGLSupportsNPOTTextures();
 
-bool ofIsGLProgrammableRenderer();
+bool OF_API_ENTRY ofIsGLProgrammableRenderer();
 
 template<class T>
 OF_DEPRECATED_MSG("Use ofGetGLFormat() instead", int ofGetGlFormat(const ofPixels_<T> & pixels));
 
 template<class T>
-int ofGetGlFormat(const ofPixels_<T> & pixels) {
+int OF_API_ENTRY ofGetGlFormat(const ofPixels_<T> & pixels) {
 	return ofGetGLFormatFromPixelFormat(pixels.getPixelFormat());
 }
 
 template<class T>
-int ofGetGLFormat(const ofPixels_<T> & pixels) {
+int OF_API_ENTRY ofGetGLFormat(const ofPixels_<T> & pixels) {
     return ofGetGLFormatFromPixelFormat(pixels.getPixelFormat());
 }
 
-std::string ofGLSLVersionFromGL(int major, int minor);
+std::string OF_API_ENTRY ofGLSLVersionFromGL(int major, int minor);
 
 #ifndef TARGET_OPENGLES
-void ofEnableGLDebugLog();
-void ofDisableGLDebugLog();
+void OF_API_ENTRY ofEnableGLDebugLog();
+void OF_API_ENTRY ofDisableGLDebugLog();
 #endif
 
 #ifndef TARGET_OPENGLES

@@ -270,7 +270,7 @@ struct Firmata_Serial_Data {
 /// ~~~~{.cpp}
 ///     sendDigitalPinMode(9, ARD_PWM)
 /// ~~~~
-class ofArduino {
+class OF_API_ENTRY ofArduino {
 
 public:
 	/// \name Constructor and Destructor

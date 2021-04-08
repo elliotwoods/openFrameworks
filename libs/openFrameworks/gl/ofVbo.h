@@ -17,7 +17,7 @@ template<class V, class N, class C, class T>
 class ofMesh_;
 using ofMesh = ofMesh_<ofDefaultVertexType, ofDefaultNormalType, ofDefaultColorType, ofDefaultTexCoordType>;
 
-class ofVbo {
+class OF_API_ENTRY ofVbo {
 public:
 	
 	ofVbo();

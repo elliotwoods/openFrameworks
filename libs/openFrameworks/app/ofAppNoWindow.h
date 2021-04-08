@@ -9,7 +9,7 @@ class ofPath;
 class of3dGraphics;
 class ofBaseRenderer;
 
-class ofAppNoWindow : public ofAppBaseWindow {
+class OF_API_ENTRY ofAppNoWindow : public ofAppBaseWindow {
 
 public:
 	ofAppNoWindow();

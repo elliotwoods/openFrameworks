@@ -8,7 +8,7 @@ class ofSoundBuffer;
 
 
 /// \brief A base class representing a sound input stream.
-class ofBaseSoundInput{
+class OF_API_ENTRY ofBaseSoundInput{
 	public:
 		/// \brief Destroy the ofBaseSoundInput.
 		virtual ~ofBaseSoundInput() {};
@@ -32,7 +32,7 @@ class ofBaseSoundInput{
 
 
 /// \brief A base class representing a sound output stream.
-class ofBaseSoundOutput{
+class OF_API_ENTRY ofBaseSoundOutput{
 	public:
 		/// \brief Destroy the ofBaseSoundOutput.
 		virtual ~ofBaseSoundOutput() {};
@@ -56,7 +56,7 @@ class ofBaseSoundOutput{
 
 /// \class ofSoundDevice
 /// \brief Represents information about a sound device on the system.
-class ofSoundDevice {
+class OF_API_ENTRY ofSoundDevice {
 public:
 	enum Api {
 		UNSPECIFIED,
@@ -98,7 +98,7 @@ public:
 	std::vector<unsigned int> sampleRates;
 };
 
-class ofSoundStreamSettings {
+class OF_API_ENTRY ofSoundStreamSettings {
 public:
 	virtual ~ofSoundStreamSettings() {}
 	size_t sampleRate = 44100;
@@ -131,7 +131,7 @@ private:
 	ofSoundDevice::Api api = ofSoundDevice::Api::UNSPECIFIED;
 };
 
-class ofBaseSoundStream {
+class OF_API_ENTRY ofBaseSoundStream {
 public:
 	virtual ~ofBaseSoundStream() {}
 	virtual bool setup(const ofSoundStreamSettings & settings) = 0;
@@ -154,13 +154,13 @@ public:
 	virtual ofSoundDevice getOutDevice() const = 0;
 };
 
-std::string toString(ofSoundDevice::Api api);
+std::string OF_API_ENTRY toString(ofSoundDevice::Api api);
 
 
 //----------------------------------------------------------
 // ofBaseSoundPlayer
 //----------------------------------------------------------
-class ofBaseSoundPlayer {
+class OF_API_ENTRY ofBaseSoundPlayer {
 
 public:
 

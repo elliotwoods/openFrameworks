@@ -10,7 +10,7 @@
 #include "of3dGraphics.h"
 #include "ofPixels.h"
 
-class ofCairoRenderer: public ofBaseRenderer{
+class OF_API_ENTRY ofCairoRenderer: public ofBaseRenderer{
 public:
 	ofCairoRenderer();
 	~ofCairoRenderer();

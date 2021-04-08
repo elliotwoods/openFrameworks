@@ -55,7 +55,7 @@ class ofVec3f;
 /// should do matrix transformations with the functions like glTranslate,
 /// glRotate, and glScale.
 /// 
-class ofMatrix4x4 {
+class OF_API_ENTRY ofMatrix4x4 {
 public:
 //	float _mat[4][4];
 	

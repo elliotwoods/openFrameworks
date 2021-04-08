@@ -8,7 +8,7 @@ class ofBaseApp;
 class ofAppBaseWindow;
 class ofWindowSettings;
 
-class ofMainLoop {
+class OF_API_ENTRY ofMainLoop {
 public:
 	ofMainLoop();
 	virtual ~ofMainLoop();

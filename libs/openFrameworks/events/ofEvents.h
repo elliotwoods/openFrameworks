@@ -8,14 +8,14 @@
 #include "glm/vec2.hpp"
 
 //-------------------------- mouse/key query
-bool ofGetMousePressed(int button=-1); //by default any button
-bool ofGetKeyPressed(int key=-1); //by default any key
+bool OF_API_ENTRY ofGetMousePressed(int button=-1); //by default any button
+bool OF_API_ENTRY ofGetKeyPressed(int key=-1); //by default any key
 
-int	ofGetMouseX();
-int	ofGetMouseY();
+int	OF_API_ENTRY ofGetMouseX();
+int	OF_API_ENTRY ofGetMouseY();
 
-int	ofGetPreviousMouseX();
-int	ofGetPreviousMouseY();
+int	OF_API_ENTRY ofGetPreviousMouseX();
+int	OF_API_ENTRY ofGetPreviousMouseY();
 
 
 
@@ -173,7 +173,7 @@ public:
 	}
 };
 
-class ofMouseEventArgs : public ofEventArgs, public glm::vec2 {
+class OF_API_ENTRY ofMouseEventArgs : public ofEventArgs, public glm::vec2 {
   public:
 	enum Type{
 		Pressed,
@@ -229,7 +229,7 @@ class ofMouseEventArgs : public ofEventArgs, public glm::vec2 {
 	}
 };
 
-class ofTouchEventArgs : public ofEventArgs, public glm::vec2 {
+class OF_API_ENTRY ofTouchEventArgs : public ofEventArgs, public glm::vec2 {
   public:
 	enum Type{
 		down,
@@ -287,7 +287,7 @@ class ofTouchEventArgs : public ofEventArgs, public glm::vec2 {
 	float xaccel, yaccel;
 };
 
-class ofResizeEventArgs : public ofEventArgs {
+class OF_API_ENTRY ofResizeEventArgs : public ofEventArgs {
 public:
 	ofResizeEventArgs()
   	:width(0)
@@ -301,7 +301,7 @@ public:
 	int height;
 };
 
-class ofWindowPosEventArgs : public ofEventArgs, public glm::vec2  {
+class OF_API_ENTRY ofWindowPosEventArgs : public ofEventArgs, public glm::vec2  {
 public:
 	ofWindowPosEventArgs(){}
 
@@ -309,7 +309,7 @@ public:
 	:glm::vec2(x,y){}
 };
 
-class ofMessage : public ofEventArgs{
+class OF_API_ENTRY ofMessage : public ofEventArgs{
 	public:
 		ofMessage( std::string msg ){
 			message = msg;
@@ -323,7 +323,7 @@ enum ofTimeMode{
 	Filtered,
 };
 
-class ofCoreEvents {
+class OF_API_ENTRY ofCoreEvents {
   public:
 	ofCoreEvents();
 	ofEvent<ofEventArgs> 		setup;
@@ -428,10 +428,10 @@ private:
 	std::chrono::nanoseconds fixedRateTimeNanos;
 };
 
-bool ofSendMessage(ofMessage msg);
-bool ofSendMessage(std::string messageString);
+bool OF_API_ENTRY ofSendMessage(ofMessage msg);
+bool OF_API_ENTRY ofSendMessage(std::string messageString);
 
-ofCoreEvents & ofEvents();
+ofCoreEvents & OF_API_ENTRY ofEvents();
 
 template<class ListenerClass>
 void ofRegisterMouseEvents(ListenerClass * listener, int prio=OF_EVENT_ORDER_AFTER_APP){

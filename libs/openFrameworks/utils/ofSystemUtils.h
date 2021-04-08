@@ -3,7 +3,7 @@
 
 /// \class ofFileDialogResult
 /// \brief file dialog box selection or save result
-class ofFileDialogResult{
+class OF_API_ENTRY ofFileDialogResult{
 	public:
 		ofFileDialogResult();
 		
@@ -20,22 +20,22 @@ class ofFileDialogResult{
 };
 
 /// \brief show an error message in an alert dialog box
-void ofSystemAlertDialog(std::string errorMessage);
+void OF_API_ENTRY ofSystemAlertDialog(std::string errorMessage);
 
 /// \brief show a file load dialog box
 /// \param windowTitle optional window title string, ie. "Load background image"
 /// \param bFolderSelection set to true to allow folder selection
 /// \param defaultPath optional default directory path to start the dialog in, ie. ofFilePath::getUserHomeDir()
 /// \return dialog result with selection (if any)
-ofFileDialogResult ofSystemLoadDialog(std::string windowTitle="", bool bFolderSelection = false, std::string defaultPath="");
+ofFileDialogResult OF_API_ENTRY ofSystemLoadDialog(std::string windowTitle="", bool bFolderSelection = false, std::string defaultPath="");
 
 /// \brief show a file save dialog box
 /// \param defaultName suggested filename to start dialog, ie "screenshot.png"
 /// \param messageName descriptive text for the save action, ie. "Saving screenshot as"
 /// \return dialog result with selection (if any)
-ofFileDialogResult ofSystemSaveDialog(std::string defaultName, std::string messageName);
+ofFileDialogResult OF_API_ENTRY ofSystemSaveDialog(std::string defaultName, std::string messageName);
 
 /// \brief show a text entry dialog box
 /// \param question descriptive text for the text entry, ie. "What's your favorite color?"
 /// \param text optional default text entry string, ie. "blue"
-std::string ofSystemTextBoxDialog(std::string question, std::string text="");
+std::string OF_API_ENTRY ofSystemTextBoxDialog(std::string question, std::string text="");

@@ -17,7 +17,7 @@
 ///     [ d e f ]
 ///     [ g h i ]
 
-class ofMatrix3x3 {
+class OF_API_ENTRY ofMatrix3x3 {
 	
 	
 public:

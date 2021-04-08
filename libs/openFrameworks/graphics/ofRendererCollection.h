@@ -4,7 +4,7 @@
 #include "of3dGraphics.h"
 #include "ofPath.h"
 
-class ofRendererCollection: public ofBaseRenderer{
+class OF_API_ENTRY ofRendererCollection: public ofBaseRenderer{
 public:
 	 ofRendererCollection():graphics3d(this){}
 	 ~ofRendererCollection(){}

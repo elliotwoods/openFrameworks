@@ -8,7 +8,7 @@
 typedef unsigned int RtAudioStreamStatus;
 class RtAudio;
 
-class ofRtAudioSoundStream : public ofBaseSoundStream {
+class OF_API_ENTRY ofRtAudioSoundStream : public ofBaseSoundStream {
 public:
 	ofRtAudioSoundStream();
 	~ofRtAudioSoundStream();

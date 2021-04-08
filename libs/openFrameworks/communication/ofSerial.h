@@ -32,7 +32,7 @@ class ofBuffer;
 
 
 /// \brief Describes a Serial device, including ID, name and path.
-class ofSerialDeviceInfo{
+class OF_API_ENTRY ofSerialDeviceInfo{
 	friend class ofSerial;
 
 	public:
@@ -111,7 +111,7 @@ class ofSerialDeviceInfo{
 /// // Open the first device and talk to it at 57600 baud
 /// serial.setup(0, 57600);
 /// ~~~~
-class ofSerial {
+class OF_API_ENTRY ofSerial {
 
 public:
 	/// \name Constructor and Destructor

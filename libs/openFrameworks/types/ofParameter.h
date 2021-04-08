@@ -20,7 +20,7 @@ class ofParameterGroup;
 
 //----------------------------------------------------------------------
 /// Base class for ofParameter, ofReadOnlyParameter and ofParameterGroup
-class ofAbstractParameter{
+class OF_API_ENTRY ofAbstractParameter{
 public:
 	virtual ~ofAbstractParameter(){}
 	virtual std::string getName() const = 0;
@@ -80,7 +80,7 @@ protected:
 //----------------------------------------------------------------------
 /// A collection of parameters with events to notify if a parameter changed
 /// and serialization facilities
-class ofParameterGroup: public ofAbstractParameter {
+class OF_API_ENTRY ofParameterGroup: public ofAbstractParameter {
 public:
 	ofParameterGroup();
 

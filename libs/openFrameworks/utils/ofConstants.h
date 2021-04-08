@@ -481,3 +481,20 @@ std::unique_ptr<T> make_unique(Args&&... args) {
 		namespace filesystem = boost::filesystem;
 	}
 #endif
+
+
+//------------------------------------------------ 
+// Define OF_API_ENTRY as blank if not defined in user code
+#ifdef TARGET_WIN32
+#	if defined(OF_EXPORTS_ENABLE)
+#		define OF_API_ENTRY __declspec(dllexport)
+#	elif defined(OF_IMPORTS_ENABLE)
+#		define OF_API_ENTRY __declspec(dllimport)
+#	else
+#		define OF_API_ENTRY
+#	endif
+#	define OF_API_IGNORE
+#else
+#	define OF_API_ENTRY
+#	define OF_API_IGNORE
+#endif

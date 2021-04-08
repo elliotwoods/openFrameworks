@@ -66,7 +66,7 @@
 /// and only allows the user to receive more valuable debugging information
 /// about the uncaught exception.  Users should design ofThread subclasses to
 /// catch and respond to all anticipated exceptions.
-class ofThread {
+class OF_API_ENTRY ofThread {
 public:
     /// \brief Create an ofThread.
     ofThread();

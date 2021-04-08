@@ -2,7 +2,7 @@
 #include "ofConstants.h"
 #include "ofUtils.h"
 
-class ofTimer {
+class OF_API_ENTRY ofTimer {
 public:
 	
 	/// \brief Constructs the default ofTimer().

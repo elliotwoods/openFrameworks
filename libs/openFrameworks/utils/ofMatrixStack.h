@@ -19,7 +19,7 @@ class ofAppBaseWindow;
 class ofFbo;
 enum ofOrientation: short;
 
-class ofMatrixStack {
+class OF_API_ENTRY ofMatrixStack {
 public:
 	ofMatrixStack(const ofAppBaseWindow * window);
 

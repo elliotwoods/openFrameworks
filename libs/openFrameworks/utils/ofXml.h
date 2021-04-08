@@ -9,7 +9,7 @@ class ofXmlIterator;
 class ofXmlAttributeIterator;
 class ofXmlSearchIterator;
 
-class ofXml{
+class OF_API_ENTRY ofXml{
 public:
 	class Search{
 	public:
@@ -305,7 +305,7 @@ private:
 	friend class ofXml;
 };
 
-class ofXmlAttributeIterator{
+class OF_API_ENTRY ofXmlAttributeIterator{
 public:
 	ofXmlAttributeIterator(){}
 
@@ -375,7 +375,7 @@ private:
 };
 
 
-class ofXmlSearchIterator{
+class OF_API_ENTRY ofXmlSearchIterator{
 public:
 	ofXmlSearchIterator();
 
@@ -405,5 +405,5 @@ private:
 	friend ofXml::Search;
 };
 // serializer
-void ofSerialize(ofXml & xml, const ofAbstractParameter & parameter);
-void ofDeserialize(const ofXml & xml, ofAbstractParameter & parameter);
+void OF_API_ENTRY ofSerialize(ofXml & xml, const ofAbstractParameter & parameter);
+void OF_API_ENTRY ofDeserialize(const ofXml & xml, ofAbstractParameter & parameter);

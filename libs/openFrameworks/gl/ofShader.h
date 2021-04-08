@@ -34,7 +34,7 @@ struct ofShaderSettings {
     bool bindDefaults = true;
 };
 
-class ofShader {
+class OF_API_ENTRY ofShader {
 
 	struct Source{
 		Source(GLuint type, const std::string & source, const std::filesystem::path & directoryPath)

@@ -9,7 +9,7 @@ class ofVboMesh;
 class ofRectangle;
 
 /// \brief A class representing a 3d primitive.
-class of3dPrimitive : public ofNode {
+class OF_API_ENTRY of3dPrimitive : public ofNode {
 public:
     of3dPrimitive();
     virtual ~of3dPrimitive();
@@ -117,7 +117,7 @@ protected:
 /// ofTexture fills the plane when it's drawn. This saves you the hassle of 
 /// creating all the texture coordinates for each vertex, which is nice.
 
-class ofPlanePrimitive : public of3dPrimitive {
+class OF_API_ENTRY ofPlanePrimitive : public of3dPrimitive {
 public:
     ofPlanePrimitive();
     ofPlanePrimitive( float width, float height, int columns, int rows, 
@@ -201,7 +201,7 @@ protected:
 /// and ofDisableAlphaBlending().
 /// 
 
-class ofSpherePrimitive : public of3dPrimitive {
+class OF_API_ENTRY ofSpherePrimitive : public of3dPrimitive {
 public:
     ofSpherePrimitive();
     ofSpherePrimitive( float radius, int res, 
@@ -253,7 +253,7 @@ protected:
 /// }
 /// ~~~~
 
-class ofIcoSpherePrimitive : public of3dPrimitive {
+class OF_API_ENTRY ofIcoSpherePrimitive : public of3dPrimitive {
 public:
     ofIcoSpherePrimitive();
     ofIcoSpherePrimitive( float radius, int iterations );
@@ -313,7 +313,7 @@ protected:
 /// 
 /// ~~~~
 
-class ofCylinderPrimitive : public of3dPrimitive {
+class OF_API_ENTRY ofCylinderPrimitive : public of3dPrimitive {
 public:
     ofCylinderPrimitive();
     ofCylinderPrimitive( float radius, float height, int radiusSegments, 
@@ -405,7 +405,7 @@ protected:
 /// Beware of the cone texture coordinates, they're a little strange.
 /// 
 
-class ofConePrimitive : public of3dPrimitive {
+class OF_API_ENTRY ofConePrimitive : public of3dPrimitive {
 public:
 
     ofConePrimitive();
@@ -508,7 +508,7 @@ protected:
 /// ~~~~
 /// 
 
-class ofBoxPrimitive : public of3dPrimitive {
+class OF_API_ENTRY ofBoxPrimitive : public of3dPrimitive {
 public:
 
     enum BoxSides {

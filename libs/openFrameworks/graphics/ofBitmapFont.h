@@ -16,7 +16,7 @@
  
  */
 
-class ofBitmapFont{
+class OF_API_ENTRY ofBitmapFont{
 public:
 	ofBitmapFont();
 	~ofBitmapFont();

@@ -18,21 +18,21 @@ namespace priv{
 	// Helper classes and methods, only for internal use of ofEvent
 
 	// -------------------------------------
-	class NoopMutex{
+	class OF_API_ENTRY NoopMutex{
 	public:
 		void lock(){}
 		void unlock(){}
 	};
 
 	// -------------------------------------
-	class AbstractEventToken{
+	class OF_API_ENTRY AbstractEventToken{
 		public:
 			virtual ~AbstractEventToken();
 	};
 
 
 	// -------------------------------------
-	class BaseFunctionId{
+	class OF_API_ENTRY BaseFunctionId{
 	public:
 		BaseFunctionId(){}
 		BaseFunctionId(const BaseFunctionId &) = delete;
@@ -43,7 +43,7 @@ namespace priv{
 	};
 
 	// -------------------------------------
-	class StdFunctionId: public BaseFunctionId{
+	class OF_API_ENTRY StdFunctionId: public BaseFunctionId{
 		static std::atomic<uint_fast64_t> nextId;
 		uint64_t id;
 

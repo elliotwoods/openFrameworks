@@ -4,17 +4,17 @@
 #include "ofSoundBaseTypes.h"
 
 /// \brief Stops all active sound players on FMOD-based systems (windows, osx).
-void ofSoundStopAll();
+void OF_API_ENTRY ofSoundStopAll();
 
 /// \brief Cleans up FMOD (windows, osx).
-void ofSoundShutdown();
+void OF_API_ENTRY ofSoundShutdown();
 
 /// \brief Sets global volume for FMOD-based sound players (windows, osx).
 /// \param vol range is 0 to 1.
-void ofSoundSetVolume(float vol);
+void OF_API_ENTRY ofSoundSetVolume(float vol);
 
 /// \brief Call in your app's update() to update FMOD-based sound players.
-void ofSoundUpdate();
+void OF_API_ENTRY ofSoundUpdate();
 
 /// \brief Gets a frequency spectrum sample, taking all current sound players into account.
 ///
@@ -23,7 +23,7 @@ void ofSoundUpdate();
 /// \warning This isn't implemented on mobile & embedded platforms.
 /// \param nBands number of spectrum bands to return, max 512.
 /// \return pointer to an FFT sample, sample size is equal to the nBands parameter.
-float * ofSoundGetSpectrum(int nBands);
+float * OF_API_ENTRY ofSoundGetSpectrum(int nBands);
 
 
 
@@ -69,7 +69,7 @@ inline void ofSoundShutdown(){}
 /// volume, pan, speed, seeking and multiplay.  This is a common cross-platform
 /// sound player interface which is inherited by each of the platform-specific
 /// sound player implementations.
-class ofSoundPlayer : public ofBaseSoundPlayer {
+class OF_API_ENTRY ofSoundPlayer : public ofBaseSoundPlayer {
 public:
     ofSoundPlayer();
 

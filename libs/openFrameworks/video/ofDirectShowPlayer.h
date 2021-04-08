@@ -13,7 +13,7 @@ typedef ofPixels_<unsigned char> ofPixels;
 
 class DirectShowVideo; 
 
-class ofDirectShowPlayer : public ofBaseVideoPlayer{
+class OF_API_ENTRY ofDirectShowPlayer : public ofBaseVideoPlayer{
     public:
 		ofDirectShowPlayer();
 		ofDirectShowPlayer(const ofDirectShowPlayer&) = delete;

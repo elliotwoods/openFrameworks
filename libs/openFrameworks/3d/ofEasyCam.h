@@ -6,7 +6,7 @@
 #include "glm/gtc/quaternion.hpp"
 
 /// \brief A super simple camera for interacting with objects in 3D space.
-class ofEasyCam : public ofCamera {
+class OF_API_ENTRY ofEasyCam : public ofCamera {
 public:
     /// \name Constructor and Destructor
 	/// \{

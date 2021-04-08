@@ -23,7 +23,7 @@
 class ofMatrix4x4;
 
 
-class ofQuaternion {
+class OF_API_ENTRY ofQuaternion {
 public:
     //    float _v[4];
     /// \cond INTERNAL

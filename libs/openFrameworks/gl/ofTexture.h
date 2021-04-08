@@ -35,7 +35,7 @@ class ofBufferObject;
 /// \brief Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures.
 /// \sa ofEnableArbTex()
 /// \returns true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures.
-bool ofGetUsingArbTex();
+bool OF_API_ENTRY ofGetUsingArbTex();
 
 /// \brief Use GL_TEXTURE_RECTANGLE textures.
 ///
@@ -52,7 +52,7 @@ bool ofGetUsingArbTex();
 /// \sa ofDisableArbTex()
 /// \warning GL_TEXTURE_RECTANGLE is not available in OpenGL ES.
 /// \warning GL_TEXTURE_RECTANGLE does not support mipmaps.
-void ofEnableArbTex();
+void OF_API_ENTRY ofEnableArbTex();
 
 /// \brief Use GL_TEXTURE_2D textures.
 ///
@@ -60,12 +60,12 @@ void ofEnableArbTex();
 /// wider range of core OpenGL features such as mipmaps.
 ///
 /// \sa ofEnableArbTex()
-void ofDisableArbTex();
+void OF_API_ENTRY ofDisableArbTex();
 
 /// \brief Check whether OF is using normalized or pixel texture coordinates.
 /// \sa ofEnableNormalizedTexCoords()
 /// \returns true if using normalized (0 - 1) texture coordinates.
-bool ofGetUsingNormalizedTexCoords();
+bool OF_API_ENTRY ofGetUsingNormalizedTexCoords();
 
 /// \brief Use normalized (0 - 1) texture coordinates.
 ///
@@ -78,11 +78,11 @@ bool ofGetUsingNormalizedTexCoords();
 /// This overrides individual ofTexture wrap settings.
 ///
 /// \sa http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml
-void ofEnableNormalizedTexCoords();
+void OF_API_ENTRY ofEnableNormalizedTexCoords();
 
 /// \brief Use pixel-based texture coordinates.
 /// \sa ofEnableNormalizedTexCoords()
-void ofDisableNormalizedTexCoords();
+void OF_API_ENTRY ofDisableNormalizedTexCoords();
 
 /// \brief Set custom global texture wrapping.
 ///
@@ -159,7 +159,7 @@ enum ofTexCompression {
 /// \brief Internal texture data structure.
 ///
 /// Used by ofTexture internally. You won't need to work with this in most cases.
-class ofTextureData {
+class OF_API_ENTRY ofTextureData {
 public:
 	ofTextureData() {
 		textureID = 0;
@@ -235,22 +235,22 @@ private:
 /// Adds a 2 pixel offset to avoid possible edge artifacts (typically a black or
 /// white border). This *very slightly* alters the image by scaling.  This is
 /// enabled by default.
-void ofEnableTextureEdgeHack();
+void OF_API_ENTRY ofEnableTextureEdgeHack();
 
 /// \todo Add docs on why the "edge hack" is needed.
 
 /// \brief Disable global texture "edge hack".
 /// \sa ofEnableTextureEdgeHack()
-void ofDisableTextureEdgeHack();
+void OF_API_ENTRY ofDisableTextureEdgeHack();
 
 /// \brief Check whether OF is using the texture "edge hack".
 /// \sa ofEnableTextureEdgeHack()
 /// \returns true if OF is currently using the texture "edge hack".
-bool ofIsTextureEdgeHackEnabled();
+bool OF_API_ENTRY ofIsTextureEdgeHackEnabled();
 
 /// \class ofTexture
 /// \brief A wrapper class for an OpenGL texture.
-class ofTexture : public ofBaseDraws {
+class OF_API_ENTRY ofTexture : public ofBaseDraws {
 	public :
 
 	/// \section Construction and Allocation

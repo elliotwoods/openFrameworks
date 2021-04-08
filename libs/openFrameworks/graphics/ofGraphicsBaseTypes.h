@@ -51,7 +51,7 @@ enum ofOrientation: short;
 
 /// \brief Contains general information about the style of ofGraphics
 /// elements such as color, line width and others.
-class ofStyle{
+class OF_API_ENTRY ofStyle{
 	public:
 		/// \brief Create a default ofStyle.
 		ofStyle(){
@@ -139,7 +139,7 @@ class ofStyle{
 // ofBaseDraws
 //----------------------------------------------------------
 
-class ofBaseDraws{
+class OF_API_ENTRY ofBaseDraws{
 public:
 	/// \brief Destroy the abstract object.
 	virtual ~ofBaseDraws(){}
@@ -213,7 +213,7 @@ public:
 };
 
 /// \brief An abstract class representing an object that can be updated.
-class ofBaseUpdates{
+class OF_API_ENTRY ofBaseUpdates{
 public:
 	/// \brief Destroy the ofBaseUpdates.
 	virtual ~ofBaseUpdates(){}
@@ -244,7 +244,7 @@ public:
 /// pixelProviders.push_back(&shortPixels);
 ///
 /// \endcode
-class ofAbstractHasPixels{
+class OF_API_ENTRY ofAbstractHasPixels{
 public:
 	/// \brief Destroy the ofAbstractHasPixels.
 	virtual ~ofAbstractHasPixels(){}
@@ -279,7 +279,7 @@ typedef ofBaseHasPixels_<unsigned short> ofBaseHasShortPixels;
 
 
 /// \brief The base renderer interface.
-class ofBaseRenderer{
+class OF_API_ENTRY ofBaseRenderer{
 public:
 	virtual ~ofBaseRenderer(){}
 

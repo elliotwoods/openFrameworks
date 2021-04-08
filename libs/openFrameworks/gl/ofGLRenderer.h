@@ -11,7 +11,7 @@ class ofShapeTessellation;
 class ofFbo;
 class of3dPrimitive;
 
-class ofGLRenderer: public ofBaseGLRenderer{
+class OF_API_ENTRY ofGLRenderer: public ofBaseGLRenderer{
 public:
 	ofGLRenderer(const ofAppBaseWindow * window);
 	~ofGLRenderer(){}

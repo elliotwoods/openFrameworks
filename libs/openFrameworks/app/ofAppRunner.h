@@ -14,11 +14,11 @@ class ofBaseRenderer;
 class ofCoreEvents;
 
 
-void ofInit();
-void ofSetupOpenGL(int w, int h, ofWindowMode screenMode);	// sets up the opengl context!
-std::shared_ptr<ofAppBaseWindow> ofCreateWindow(const ofWindowSettings & settings);	// sets up the opengl context!
-std::shared_ptr<ofMainLoop> ofGetMainLoop();
-void ofSetMainLoop(std::shared_ptr<ofMainLoop> mainLoop);
+void OF_API_ENTRY ofInit();
+void OF_API_ENTRY ofSetupOpenGL(int w, int h, ofWindowMode screenMode);	// sets up the opengl context!
+std::shared_ptr<ofAppBaseWindow> OF_API_ENTRY ofCreateWindow(const ofWindowSettings & settings);	// sets up the opengl context!
+std::shared_ptr<ofMainLoop> OF_API_ENTRY ofGetMainLoop();
+void OF_API_ENTRY ofSetMainLoop(std::shared_ptr<ofMainLoop> mainLoop);
 
 template<typename Window>
 void ofSetupOpenGL(std::shared_ptr<Window> windowPtr, int w, int h, ofWindowMode screenMode){
@@ -32,7 +32,7 @@ void ofSetupOpenGL(std::shared_ptr<Window> windowPtr, int w, int h, ofWindowMode
 
 //special case so we preserve supplied settngs
 //TODO: remove me when we remove the ofSetupOpenGL legacy approach.
-void ofSetupOpenGL(std::shared_ptr<ofAppGLFWWindow> windowPtr, int w, int h, ofWindowMode screenMode);
+void OF_API_ENTRY ofSetupOpenGL(std::shared_ptr<ofAppGLFWWindow> windowPtr, int w, int h, ofWindowMode screenMode);
 
 template<typename Window>
 static void noopDeleter(Window*){}
@@ -44,72 +44,72 @@ void ofSetupOpenGL(Window * windowPtr, int w, int h, ofWindowMode screenMode){
 }
 
 
-int ofRunApp(std::shared_ptr<ofBaseApp> && OFSA);
-int ofRunApp(ofBaseApp * OFSA = nullptr); // will be deprecated
-void ofRunApp(std::shared_ptr<ofAppBaseWindow> window, std::shared_ptr<ofBaseApp> && app);
-int ofRunMainLoop();
+int OF_API_ENTRY ofRunApp(std::shared_ptr<ofBaseApp> && OFSA);
+int OF_API_ENTRY ofRunApp(ofBaseApp * OFSA = nullptr); // will be deprecated
+void OF_API_ENTRY ofRunApp(std::shared_ptr<ofAppBaseWindow> window, std::shared_ptr<ofBaseApp> && app);
+int OF_API_ENTRY ofRunMainLoop();
 
 
-ofBaseApp * ofGetAppPtr();
+ofBaseApp * OF_API_ENTRY ofGetAppPtr();
 
-void		ofExit(int status=0);
+void		OF_API_ENTRY ofExit(int status=0);
 
 //-------------------------- time
-float 		ofGetFrameRate();
-float 		ofGetTargetFrameRate();
-uint64_t	ofGetFrameNum();
-void 		ofSetFrameRate(int targetRate);
-double		ofGetLastFrameTime();
-void		ofSetTimeModeSystem();
-uint64_t	ofGetFixedStepForFps(double fps);
-void		ofSetTimeModeFixedRate(uint64_t stepNanos = ofGetFixedStepForFps(60)); //default nanos for 1 frame at 60fps
-void		ofSetTimeModeFiltered(float alpha = 0.9);
+float 		OF_API_ENTRY ofGetFrameRate();
+float 		OF_API_ENTRY ofGetTargetFrameRate();
+uint64_t	OF_API_ENTRY ofGetFrameNum();
+void 		OF_API_ENTRY ofSetFrameRate(int targetRate);
+double		OF_API_ENTRY ofGetLastFrameTime();
+void		OF_API_ENTRY ofSetTimeModeSystem();
+uint64_t	OF_API_ENTRY ofGetFixedStepForFps(double fps);
+void		OF_API_ENTRY ofSetTimeModeFixedRate(uint64_t stepNanos = ofGetFixedStepForFps(60)); //default nanos for 1 frame at 60fps
+void		OF_API_ENTRY ofSetTimeModeFiltered(float alpha = 0.9);
 
-void		ofSetOrientation(ofOrientation orientation, bool vFlip=true);
-ofOrientation			ofGetOrientation();
+void		OF_API_ENTRY ofSetOrientation(ofOrientation orientation, bool vFlip=true);
+ofOrientation OF_API_ENTRY ofGetOrientation();
 
 //-------------------------- cursor
-void 		ofHideCursor();
-void 		ofShowCursor();
+void 		OF_API_ENTRY ofHideCursor();
+void 		OF_API_ENTRY ofShowCursor();
 //-------------------------- window / screen
-int 		ofGetWindowPositionX();
-int 		ofGetWindowPositionY();
-int 		ofGetScreenWidth();
-int 		ofGetScreenHeight();
-int			ofGetWindowMode();
-int 		ofGetWidth();			// ofGetWidth is correct for orientation
-int 		ofGetHeight();
-int 		ofGetWindowWidth();			// ofGetWindowWidth is correct for actual window coordinates - so doesn't change with orientation.
-int 		ofGetWindowHeight();
+int 		OF_API_ENTRY ofGetWindowPositionX();
+int 		OF_API_ENTRY ofGetWindowPositionY();
+int 		OF_API_ENTRY ofGetScreenWidth();
+int 		OF_API_ENTRY ofGetScreenHeight();
+int			OF_API_ENTRY ofGetWindowMode();
+int 		OF_API_ENTRY ofGetWidth();			// ofGetWidth is correct for orientation
+int 		OF_API_ENTRY ofGetHeight();
+int 		OF_API_ENTRY ofGetWindowWidth();			// ofGetWindowWidth is correct for actual window coordinates - so doesn't change with orientation.
+int 		OF_API_ENTRY ofGetWindowHeight();
 
-std::string ofGetClipboardString();
-void		ofSetClipboardString(const std::string & str);
+std::string OF_API_ENTRY ofGetClipboardString();
+void		OF_API_ENTRY ofSetClipboardString(const std::string & str);
 
 /// \returns a random number between 0 and the width of the window.
-float ofRandomWidth();
+float OF_API_ENTRY ofRandomWidth();
 
 /// \returns a random number between 0 and the height of the window.
-float ofRandomHeight();
-bool		ofDoesHWOrientation();
-glm::vec2	ofGetWindowSize();
-ofRectangle	ofGetWindowRect();
-ofAppBaseWindow * ofGetWindowPtr();
-std::shared_ptr<ofAppBaseWindow> ofGetCurrentWindow();
+float OF_API_ENTRY ofRandomHeight();
+bool		OF_API_ENTRY ofDoesHWOrientation();
+glm::vec2	OF_API_ENTRY ofGetWindowSize();
+ofRectangle	OF_API_ENTRY ofGetWindowRect();
+ofAppBaseWindow * OF_API_ENTRY ofGetWindowPtr();
+std::shared_ptr<ofAppBaseWindow> OF_API_ENTRY ofGetCurrentWindow();
 
-void 		ofSetWindowPosition(int x, int y);
-void 		ofSetWindowShape(int width, int height);
-void 		ofSetWindowTitle(std::string title);
-void		ofEnableSetupScreen();
-void		ofDisableSetupScreen();
-void		ofSetFullscreen(bool fullscreen);
-void		ofToggleFullscreen();
+void 		OF_API_ENTRY ofSetWindowPosition(int x, int y);
+void 		OF_API_ENTRY ofSetWindowShape(int width, int height);
+void 		OF_API_ENTRY ofSetWindowTitle(std::string title);
+void		OF_API_ENTRY ofEnableSetupScreen();
+void		OF_API_ENTRY ofDisableSetupScreen();
+void		OF_API_ENTRY ofSetFullscreen(bool fullscreen);
+void		OF_API_ENTRY ofToggleFullscreen();
 //-------------------------- sync
-void 		ofSetVerticalSync(bool bSync);
+void 		OF_API_ENTRY ofSetVerticalSync(bool bSync);
 
-ofCoreEvents & ofEvents();
-void ofSetCurrentRenderer(std::shared_ptr<ofBaseRenderer> renderer,bool setDefaults=false);
-std::shared_ptr<ofBaseRenderer> & ofGetCurrentRenderer();
-void ofSetEscapeQuitsApp(bool bQuitOnEsc);
+ofCoreEvents & OF_API_ENTRY ofEvents();
+void OF_API_ENTRY ofSetCurrentRenderer(std::shared_ptr<ofBaseRenderer> renderer,bool setDefaults=false);
+std::shared_ptr<ofBaseRenderer> & OF_API_ENTRY ofGetCurrentRenderer();
+void OF_API_ENTRY ofSetEscapeQuitsApp(bool bQuitOnEsc);
 
 //-------------------------- native window handles
 #if defined(TARGET_LINUX) && !defined(TARGET_RASPBERRY_PI_LEGACY)
@@ -138,6 +138,6 @@ EGLSurface ofGetEGLSurface();
 #endif
 
 #if defined(TARGET_WIN32)
-	HGLRC ofGetWGLContext();
-	HWND ofGetWin32Window();
+	HGLRC OF_API_ENTRY ofGetWGLContext();
+	HWND OF_API_ENTRY ofGetWin32Window();
 #endif

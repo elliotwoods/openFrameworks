@@ -12,7 +12,7 @@ class ofRectangle;
 
 /// \brief A basic camera object for interacting with objects in 3D space.
 /// \author Memo Akten, MSA Visuals Ltd. 2011
-class ofCamera : public ofNode {
+class OF_API_ENTRY ofCamera : public ofNode {
 public:
 	/// \name Constructor and Destructor
 	/// \{

@@ -43,20 +43,20 @@ OF_DEPRECATED_MSG("Use an ofSoundStreamSettings object instead of directly passi
 OF_DEPRECATED_MSG("Use an ofSoundStreamSettings object instead of directly passing the parameters",
 	void ofSoundStreamSetup(int nOutputChannels, int nInputChannels, ofBaseApp * appPtr, int sampleRate, int bufferSize, int nBuffers));
 
-void ofSoundStreamSetup(ofSoundStreamSettings & settings);
+void OF_API_ENTRY ofSoundStreamSetup(ofSoundStreamSettings & settings);
 
 /// \brief Stops the sound stream (audioIn() / audioOut() will stop being called)
-void ofSoundStreamStop();
+void OF_API_ENTRY ofSoundStreamStop();
 
 /// \brief Starts the sound stream (audioIn() / audioOut() will start being called)
-void ofSoundStreamStart();
+void OF_API_ENTRY ofSoundStreamStart();
 
 /// \brief Stops the sound stream and also cleans up the stream's resources
-void ofSoundStreamClose();
+void OF_API_ENTRY ofSoundStreamClose();
 
 /// \brief Prints a list of all available audio devices
 /// \return all sound devices found on the system
-std::vector<ofSoundDevice> ofSoundStreamListDevices();
+std::vector<ofSoundDevice> OF_API_ENTRY ofSoundStreamListDevices();
 
 /// \class ofSoundStream
 /// \brief Gives access to audio input and output devices
@@ -81,7 +81,7 @@ std::vector<ofSoundDevice> ofSoundStreamListDevices();
 ///
 /// \warning Be aware that audioIn() and audioOut() will be called on a different
 /// thread from your app's update() / draw() thread.
-class ofSoundStream {
+class OF_API_ENTRY ofSoundStream {
 public:
 	ofSoundStream();
 

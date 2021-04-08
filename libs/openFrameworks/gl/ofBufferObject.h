@@ -5,7 +5,7 @@
 template<typename T>
 class ofPixels_;
 
-class ofBufferObject {
+class OF_API_ENTRY ofBufferObject {
 public:
 	ofBufferObject();
 

@@ -37,9 +37,9 @@ static const std::string OF_TTF_MONO = "monospace";
 /// \}
 
 
-void ofTrueTypeShutdown();
+void OF_API_ENTRY ofTrueTypeShutdown();
 
-class ofUnicode{
+class OF_API_ENTRY ofUnicode{
 public:
 	struct range{
 		std::uint32_t begin;
@@ -105,7 +105,7 @@ public:
 	static const range OtherAdditionalSymbols;
 };
 
-class ofAlphabet{
+class OF_API_ENTRY ofAlphabet{
 public:
 	static const std::initializer_list<ofUnicode::range> Emoji;
 	static const std::initializer_list<ofUnicode::range> Japanese;
@@ -147,7 +147,7 @@ struct ofTrueTypeFontSettings{
     }
 };
 
-class ofTrueTypeFont{
+class OF_API_ENTRY ofTrueTypeFont{
 
 public:
 

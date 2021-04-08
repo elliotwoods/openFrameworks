@@ -17,9 +17,9 @@ class ofPixels_;
 typedef ofPixels_<unsigned char> ofPixels;
 
 #ifdef TARGET_OPENGLES
-class ofGLFWWindowSettings: public ofGLESWindowSettings{
+class OF_API_ENTRY ofGLFWWindowSettings: public ofGLESWindowSettings{
 #else
-class ofGLFWWindowSettings: public ofGLWindowSettings{
+class OF_API_ENTRY ofGLFWWindowSettings: public ofGLWindowSettings{
 #endif
 public:
 	ofGLFWWindowSettings(){}
@@ -56,9 +56,9 @@ public:
 };
 
 #ifdef TARGET_OPENGLES
-class ofAppGLFWWindow : public ofAppBaseGLESWindow{
+class OF_API_ENTRY ofAppGLFWWindow : public ofAppBaseGLESWindow{
 #else
-class ofAppGLFWWindow : public ofAppBaseGLWindow {
+class OF_API_ENTRY ofAppGLFWWindow : public ofAppBaseGLWindow {
 #endif
 
 public:

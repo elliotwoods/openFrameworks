@@ -3,7 +3,7 @@
 #include "ofMesh.h"
 #include "ofVbo.h"
 
-class ofVboMesh: public ofMesh{
+class OF_API_ENTRY ofVboMesh: public ofMesh{
 public:
 	using ofMesh::draw;
 	ofVboMesh();

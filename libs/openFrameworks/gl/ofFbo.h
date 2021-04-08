@@ -42,7 +42,7 @@ private:
     friend class ofFbo;
 };
 
-class ofFbo : public ofBaseDraws, public ofBaseHasTexture {
+class OF_API_ENTRY ofFbo : public ofBaseDraws, public ofBaseHasTexture {
 public:
 
 	ofFbo();

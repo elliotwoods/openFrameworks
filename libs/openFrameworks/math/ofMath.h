@@ -30,7 +30,7 @@
 /// \warning ofRandom wraps C++'s `rand()` which is not reentrant or thread safe.
 ///
 /// \param max The maximum value of the random number.
-float ofRandom(float max); 
+float OF_API_ENTRY ofRandom(float max);
 
 /// \brief Get a random number between two values.
 ///
@@ -47,21 +47,21 @@ float ofRandom(float max);
 /// \param val0 the minimum value of the random number.
 /// \param val1 The maximum value of the random number.
 /// \returns A random floating point number between val0 and val1.
-float ofRandom(float val0, float val1);
+float OF_API_ENTRY ofRandom(float val0, float val1);
 
 /// \brief Get a random floating point number.
 ///
 /// \warning ofRandom wraps `rand()` which is not reentrant or thread safe.
 ///
 /// \returns A random floating point number between -1 and 1.
-float ofRandomf();
+float OF_API_ENTRY ofRandomf();
 
 /// \brief Get a random unsigned floating point number.
 ///
 /// \warning ofRandom wraps `rand()` which is not reentrant or thread safe.
 ///
 /// \returns A random floating point number between 0 and 1.
-float ofRandomuf();
+float OF_API_ENTRY ofRandomuf();
 
 
 /// \brief Get a random floating point number between 0 and the screen width.
@@ -71,7 +71,7 @@ float ofRandomuf();
 /// \warning ofRandom wraps `rand()` which is not reentrant or thread safe.
 ///
 /// \returns a random number between 0 and ofGetWidth().
-float ofRandomWidth();
+float OF_API_ENTRY ofRandomWidth();
 
 /// \brief Get a random floating point number between 0 and the screen height.
 ///
@@ -80,13 +80,13 @@ float ofRandomWidth();
 /// \warning ofRandom wraps `rand()` which is not reentrant or thread safe.
 ///
 /// \returns a random number between 0 and ofGetHeight().
-float ofRandomHeight();
+float OF_API_ENTRY ofRandomHeight();
 
 /// \brief Seed the seeds the random number generator with a unique value.
 ///
 /// This seeds the random number generator with an acceptably random value, 
 /// generated from clock time and the PID.
-void ofSeedRandom();
+void OF_API_ENTRY ofSeedRandom();
 
 /// \brief Seed the random number generator.
 ///
@@ -95,7 +95,7 @@ void ofSeedRandom();
 /// setup.  This can be useful for debugging and testing.
 ///
 /// \param val The value with which to seed the generator.
-void ofSeedRandom(int val);
+void OF_API_ENTRY ofSeedRandom(int val);
 
 /// \}
 
@@ -113,7 +113,7 @@ void ofSeedRandom(int val);
 /// \param min The lower bound of the range.
 /// \param max The upper bound of the range.
 /// \returns A float between 0 and 1.
-float ofNormalize(float value, float min, float max);
+float OF_API_ENTRY ofNormalize(float value, float min, float max);
 
 /// \brief Given a value and an input range, map the value to an output range.
 /// 
@@ -146,7 +146,7 @@ float ofNormalize(float value, float min, float max);
 ///		  FLT_EPSILON, outputMin will be returned to prevent divide by zero
 ///		  errors.
 /// \returns a mapped floating point number.
-float ofMap(float value, float inputMin, float inputMax, float outputMin, float outputMax, bool clamp = false);
+float OF_API_ENTRY ofMap(float value, float inputMin, float inputMax, float outputMin, float outputMax, bool clamp = false);
 
 /// \brief Clamp a value between min and max.
 /// 
@@ -167,14 +167,14 @@ float ofMap(float value, float inputMin, float inputMax, float outputMin, float 
 /// \param min The lower bound of the range.
 /// \param max The upper bound of the range.
 /// \returns a floating point number in the range [min, max].
-float ofClamp(float value, float min, float max);
+float OF_API_ENTRY ofClamp(float value, float min, float max);
 
 /// \brief Determine if a number is inside of a giv(float)(en range.
 /// \param t The value to test.
 /// \param min The lower bound of the range.
 /// \param max The upper bound of the range.
 /// \returns true if the number t is the range of [min, max].
-bool ofInRange(float t, float min, float max);
+bool OF_API_ENTRY ofInRange(float t, float min, float max);
 
 /// \brief Linearly interpolate a value within a range.
 /// 
@@ -198,7 +198,7 @@ bool ofInRange(float t, float min, float max);
 /// \param stop The upper bound of the range.
 /// \param amt The normalized [0, 1] value within the range to return.
 /// \returns A float between start and stop.
-float ofLerp(float start, float stop, float amt);
+float OF_API_ENTRY ofLerp(float start, float stop, float amt);
 
 /// \}
 
@@ -215,7 +215,7 @@ float ofLerp(float start, float stop, float amt);
 /// \param x2 X position of second point.
 /// \param y2 Y position of second point.
 /// \returns float Distance between points.
-float ofDist(float x1, float y1, float x2, float y2);
+float OF_API_ENTRY ofDist(float x1, float y1, float x2, float y2);
 ///
 /// \brief Calculates the 3D distance between two points.
 ///
@@ -228,7 +228,7 @@ float ofDist(float x1, float y1, float x2, float y2);
 /// \param y2 Y position of second point.
 /// \param z2 Z position of second point.
 /// \returns float Distance between points.
-float ofDist(float x1, float y1, float z1, float x2, float y2, float z2);
+float OF_API_ENTRY ofDist(float x1, float y1, float z1, float x2, float y2, float z2);
 
 /// \brief Calculates the squared 2D distance between two points.
 ///
@@ -241,7 +241,7 @@ float ofDist(float x1, float y1, float z1, float x2, float y2, float z2);
 /// \param x2 X position of second point.
 /// \param y2 Y position of second point.
 /// \returns distance-squared between two points.
-float ofDistSquared(float x1, float y1, float x2, float y2);
+float OF_API_ENTRY ofDistSquared(float x1, float y1, float x2, float y2);
 
 /// \brief Calculates the squared 3D distance between two points.
 ///
@@ -256,7 +256,7 @@ float ofDistSquared(float x1, float y1, float x2, float y2);
 /// \param y2 Y position of second point.
 /// \param z2 Z position of second point.
 /// \returns distance-squared between two points.
-float ofDistSquared(float x1, float y1, float z1, float x2, float y2, float z2);
+float OF_API_ENTRY ofDistSquared(float x1, float y1, float z1, float x2, float y2, float z2);
 
 /// \}
 
@@ -273,7 +273,7 @@ float ofDistSquared(float x1, float y1, float z1, float x2, float y2, float z2);
 ///
 /// \param radians An angle in radians.
 /// \returns the angle in degrees.
-float ofRadToDeg(float radians);
+float OF_API_ENTRY ofRadToDeg(float radians);
 
 /// \brief Convert degrees to radians.
 ///
@@ -284,7 +284,7 @@ float ofRadToDeg(float radians);
 ///
 /// \param degrees An angle in degrees.
 /// \returns the angle in radians.
-float ofDegToRad(float degrees);
+float OF_API_ENTRY ofDegToRad(float degrees);
 
 /// \brief Linearly interpolate a value between two angles in degrees.
 /// 
@@ -296,7 +296,7 @@ float ofDegToRad(float degrees);
 /// \param targetAngle The upper bound of the range in degrees.
 /// \param pct An amount between [0.0, 1.0] within the range to return.
 /// \returns An angle in degrees between currentAngle and targetAngle.
-float ofLerpDegrees(float currentAngle, float targetAngle, float pct);
+float OF_API_ENTRY ofLerpDegrees(float currentAngle, float targetAngle, float pct);
 
 /// \brief Linearly interpolate a value between two angles in radians.
 /// 
@@ -308,7 +308,7 @@ float ofLerpDegrees(float currentAngle, float targetAngle, float pct);
 /// \param targetAngle The upper bound of the range in radians.
 /// \param pct An amount between [0.0, 1.0] within the range to return.
 /// \returns An angle in radians between currentAngle and targetAngle.
-float ofLerpRadians(float currentAngle, float targetAngle, float pct);
+float OF_API_ENTRY ofLerpRadians(float currentAngle, float targetAngle, float pct);
 
 /// \brief Calculates the difference between two angles in degrees.
 ///
@@ -323,7 +323,7 @@ float ofLerpRadians(float currentAngle, float targetAngle, float pct);
 /// \param currentAngle The current angle in degrees.
 /// \param targetAngle the angle to be compared to in degrees.
 /// \returns The difference between two angles in degrees.
-float ofAngleDifferenceDegrees(float currentAngle, float targetAngle);
+float OF_API_ENTRY ofAngleDifferenceDegrees(float currentAngle, float targetAngle);
 
 /// \brief Calculates the difference between two angles in radians.
 ///
@@ -338,7 +338,7 @@ float ofAngleDifferenceDegrees(float currentAngle, float targetAngle);
 /// \param currentAngle The current angle in radians.
 /// \param targetAngle the angle to be compared to in radians.
 /// \returns The difference between two angles in radians.
-float ofAngleDifferenceRadians(float currentAngle, float targetAngle);
+float OF_API_ENTRY ofAngleDifferenceRadians(float currentAngle, float targetAngle);
 
 /// \}
 
@@ -361,13 +361,13 @@ float ofAngleDifferenceRadians(float currentAngle, float targetAngle);
 /// \param value The value to map.
 /// \param from The lower bound of the range.
 /// \returns to The upper bound of the range.
-float ofWrap(float value, float from, float to);
+float OF_API_ENTRY ofWrap(float value, float from, float to);
 
 // \brief Convenience function for ofWrap(), constrained between -PI...PI
-float ofWrapRadians(float angle, float from = -glm::pi<float>(), float to=glm::pi<float>());
+float OF_API_ENTRY ofWrapRadians(float angle, float from = -glm::pi<float>(), float to=glm::pi<float>());
 
 // \brief Convenience function for ofWrap(), constrained between -180...180
-float ofWrapDegrees(float angle, float from = -180, float to=+180);
+float OF_API_ENTRY ofWrapDegrees(float angle, float from = -180, float to=+180);
 
 /// \}
 
@@ -376,46 +376,46 @@ float ofWrapDegrees(float angle, float from = -180, float to=+180);
 
 
 /// \brief Calculates a one dimensional Perlin noise value between 0.0...1.0.
-float ofNoise(float x);
+float OF_API_ENTRY ofNoise(float x);
 
 /// \brief Calculates a two dimensional Perlin noise value between 0.0...1.0.
-float ofNoise(float x, float y);
+float OF_API_ENTRY ofNoise(float x, float y);
 
 /// \brief Calculates a two dimensional Perlin noise value between 0.0...1.0.
-float ofNoise(const glm::vec2& p);
+float OF_API_ENTRY ofNoise(const glm::vec2& p);
 
 /// \brief Calculates a three dimensional Perlin noise value between 0.0...1.0.
-float ofNoise(float x, float y, float z);
+float OF_API_ENTRY ofNoise(float x, float y, float z);
 
 /// \brief Calculates a three dimensional Perlin noise value between 0.0...1.0.
-float ofNoise(const glm::vec3& p);
+float OF_API_ENTRY ofNoise(const glm::vec3& p);
 
 /// \brief Calculates a four dimensional Perlin noise value between 0.0...1.0.
-float ofNoise(float x, float y, float z, float w);
+float OF_API_ENTRY ofNoise(float x, float y, float z, float w);
 
 /// \brief Calculates a four dimensional Perlin noise value between 0.0...1.0.
-float ofNoise(const glm::vec4& p);
+float OF_API_ENTRY ofNoise(const glm::vec4& p);
 
 /// \brief Calculates a one dimensional Perlin noise value between -1.0...1.0.
-float ofSignedNoise(float x);
+float OF_API_ENTRY ofSignedNoise(float x);
 
 /// \brief Calculates a two dimensional Perlin noise value between -1.0...1.0.
-float ofSignedNoise(float x, float y);
+float OF_API_ENTRY ofSignedNoise(float x, float y);
 
 /// \brief Calculates a two dimensional Perlin noise value between -1.0...1.0.
-float ofSignedNoise(const glm::vec2& p);
+float OF_API_ENTRY ofSignedNoise(const glm::vec2& p);
 
 /// \brief Calculates a three dimensional Perlin noise value between -1.0...1.0.
-float ofSignedNoise(float x, float y, float z);
+float OF_API_ENTRY ofSignedNoise(float x, float y, float z);
 
 /// \brief Calculates a three dimensional Perlin noise value between -1.0...1.0.
-float ofSignedNoise(const glm::vec3& p);
+float OF_API_ENTRY ofSignedNoise(const glm::vec3& p);
 
 /// \brief Calculates a four dimensional Perlin noise value between -1.0...1.0.
-float ofSignedNoise(float x, float y, float z, float w);
+float OF_API_ENTRY ofSignedNoise(float x, float y, float z, float w);
 
 /// \brief Calculates a four dimensional Perlin noise value between -1.0...1.0.
-float ofSignedNoise(const glm::vec4 & p);
+float OF_API_ENTRY ofSignedNoise(const glm::vec4 & p);
 
 /// \}
 
@@ -555,11 +555,11 @@ Type ofInterpolateHermite(const Type& y0, const Type& y1, const Type& y2, const 
 ///
 /// \param a The starting point for finding the next power of 2.
 /// \returns value^2.
-int ofNextPow2(int a);
+int OF_API_ENTRY ofNextPow2(int a);
 
 /// \brief Returns the sign of a number.
 /// \returns int -1 if n is negative, 1 if n is positive, and 0 is n == 0;
-int ofSign(float n);
+int OF_API_ENTRY ofSign(float n);
 
 /// \brief Compare two floating point types for equality.
 ///

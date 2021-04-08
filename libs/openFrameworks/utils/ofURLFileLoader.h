@@ -8,7 +8,7 @@ class ofHttpResponse;
 
 /// \class ofHttpRequest
 /// \brief an HTTP GET or POST request
-class ofHttpRequest{
+class OF_API_ENTRY ofHttpRequest{
 public:
 	ofHttpRequest();
 	ofHttpRequest(const std::string& url, const std::string& name,bool saveTo=false);
@@ -39,7 +39,7 @@ private:
 
 /// \class ofHttpResponse
 /// \brief an HTTP response to a GET or POST request
-class ofHttpResponse{
+class OF_API_ENTRY ofHttpResponse{
 public:
 	ofHttpResponse();
 	ofHttpResponse(const ofHttpRequest& request, const ofBuffer& data, int status, const std::string& error);
@@ -57,21 +57,21 @@ public:
 /// blocks until a response is returned or the request times out
 /// \param url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
 /// \returns HTTP response
-ofHttpResponse ofLoadURL(const std::string& url);
+ofHttpResponse OF_API_ENTRY ofLoadURL(const std::string& url);
 
 /// \brief make an asynchronous HTTP GET request
 /// will not block, placed in a queue and run using a background thread
 /// \param url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
 /// \param name optional key to use when sorting requests
 /// \return unique id for the active HTTP request
-int ofLoadURLAsync(const std::string& url, const std::string& name=""); // returns id
+int OF_API_ENTRY ofLoadURLAsync(const std::string& url, const std::string& name=""); // returns id
 
 /// \brief make an HTTP GET request and save the response data to a file
 /// blocks until a response is returned or the request times out
 /// \param url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
 /// \param path file path to save to
 /// \return HTTP response on success or failure
-ofHttpResponse ofSaveURLTo(const std::string& url, const std::filesystem::path& path);
+ofHttpResponse OF_API_ENTRY ofSaveURLTo(const std::string& url, const std::filesystem::path& path);
 
 /// make an asynchronous HTTP request for a url and save the response to a file at path
 /// \returns unique request id for the active HTTP request
@@ -81,19 +81,19 @@ ofHttpResponse ofSaveURLTo(const std::string& url, const std::filesystem::path& 
 /// \param url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
 /// \param path file path to save to
 /// \returns unique id for the active HTTP request
-int ofSaveURLAsync(const std::string& url, const std::filesystem::path& path);
+int OF_API_ENTRY ofSaveURLAsync(const std::string& url, const std::filesystem::path& path);
 
 /// \brief remove an active HTTP request from the queue
 /// \param id HTTP request id
-void ofRemoveURLRequest(int id);
+void OF_API_ENTRY ofRemoveURLRequest(int id);
 
 /// \brief remove all active HTTP requests from the queue
-void ofRemoveAllURLRequests();
+void OF_API_ENTRY ofRemoveAllURLRequests();
 
 /// \brief stop & remove all active and waiting HTTP requests
-void ofStopURLLoader();
+void OF_API_ENTRY ofStopURLLoader();
 
-ofEvent<ofHttpResponse> & ofURLResponseEvent();
+ofEvent<ofHttpResponse> & OF_API_ENTRY ofURLResponseEvent();
 
 template<class T>
 void ofRegisterURLNotification(T * obj){
@@ -109,7 +109,7 @@ class ofBaseURLFileLoader;
 
 /// \class ofURLFileLoader
 /// \brief loads a file from a URL using an HTTP request
-class ofURLFileLoader  {
+class OF_API_ENTRY ofURLFileLoader  {
     public:
 	
         ofURLFileLoader();	
@@ -168,7 +168,7 @@ class ofURLFileLoader  {
 
 /// \class ofBaseURLFileLoader
 /// \brief loads a file from a URL using an HTTP request
-class ofBaseURLFileLoader{
+class OF_API_ENTRY ofBaseURLFileLoader{
 public:
 
 	virtual ~ofBaseURLFileLoader(){};

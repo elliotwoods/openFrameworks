@@ -77,7 +77,7 @@
 /// understand!
 /// \sa ofVec2f for 2D vectors
 /// \sa ofVec4f for 4D vectors
-class ofVec3f {
+class OF_API_ENTRY ofVec3f {
 public:
    	/// \cond INTERNAL
 	static const int DIM = 3;

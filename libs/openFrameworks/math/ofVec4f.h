@@ -8,7 +8,7 @@ class ofVec3f;
 #include "glm/vec4.hpp"
 #include "glm/fwd.hpp"
 
-class ofVec4f {
+class OF_API_ENTRY ofVec4f {
 public:
     /// \cond INTERNAL
     static const int DIM = 4;

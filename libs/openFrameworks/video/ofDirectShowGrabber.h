@@ -10,7 +10,7 @@
 #endif
 
 
-class ofDirectShowGrabber : public ofBaseVideoGrabber{
+class OF_API_ENTRY ofDirectShowGrabber : public ofBaseVideoGrabber{
 
 	public :
 

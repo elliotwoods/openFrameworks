@@ -31,7 +31,7 @@
 ///
 /// A buffer of data which can be accessed as simple bytes or text.
 ///
-class ofBuffer{
+class OF_API_ENTRY ofBuffer{
 	
 public:
 	ofBuffer();
@@ -276,7 +276,7 @@ private:
 /// \param path file to open
 /// \param binary set to false if you are reading a text file & want lines
 /// split at endline characters automatically
-ofBuffer ofBufferFromFile(const std::filesystem::path & path, bool binary=true);
+ofBuffer OF_API_ENTRY ofBufferFromFile(const std::filesystem::path & path, bool binary=true);
 
 //--------------------------------------------------
 /// Write the contents of a buffer to a file at path.
@@ -287,14 +287,14 @@ ofBuffer ofBufferFromFile(const std::filesystem::path & path, bool binary=true);
 /// \param buffer data source to write from
 /// \param binary set to false if you are writing a text file & want lines
 /// split at endline characters automatically
-bool ofBufferToFile(const std::filesystem::path & path, const ofBuffer& buffer, bool binary=true);
+bool OF_API_ENTRY ofBufferToFile(const std::filesystem::path & path, const ofBuffer& buffer, bool binary=true);
 
 //--------------------------------------------------
 /// \class ofFilePath
 ///
 /// Static class for working with file path strings.
 ///
-class ofFilePath{
+class OF_API_ENTRY ofFilePath{
 public:
 	
 	/// Get the extension of a filename, ie. "duck.jpg" -> "jpg".
@@ -459,7 +459,7 @@ public:
 ///
 /// inherits from an fstream so you can read/write using the stream operators
 /// once a file path has been opened
-class ofFile: public std::fstream{
+class OF_API_ENTRY ofFile: public std::fstream{
 
 public:
 	
@@ -821,7 +821,7 @@ private:
 /// Path to a directory. Can be used to query file and directory
 /// contents.
 ///
-class ofDirectory{
+class OF_API_ENTRY ofDirectory{
 
 public:
 

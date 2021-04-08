@@ -76,7 +76,7 @@ class ofMeshFace_;
 /// }
 /// ~~~~
 template<class V, class N, class C, class T>
-class ofMesh_{
+class OF_API_ENTRY ofMesh_{
 public:
 
 	/// \name Construction
@@ -707,4 +707,5 @@ private:
 using ofMesh = ofMesh_<ofDefaultVertexType, ofDefaultNormalType, ofDefaultColorType, ofDefaultTexCoordType>;
 using ofMeshFace = ofMeshFace_<ofDefaultVertexType, ofDefaultNormalType, ofDefaultColorType, ofDefaultTexCoordType>;
 
+template class OF_API_ENTRY ofMesh_<ofDefaultVertexType, ofDefaultNormalType, ofDefaultColorType, ofDefaultTexCoordType>;
 #endif

@@ -87,7 +87,7 @@ enum ofScaleMode{
 ///
 /// \warning While ofRectangle takes glm::vec3
 /// all ofRectangle operations are 2D only, ignoring the z-component.
-class ofRectangle{
+class OF_API_ENTRY ofRectangle{
 public:
 
     /// \name Constructor

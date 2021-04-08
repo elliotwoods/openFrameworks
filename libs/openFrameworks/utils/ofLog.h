@@ -174,7 +174,7 @@ enum ofLogLevel: short{
 /// The default ofLogLevel is `OF_LOG_NOTICE`.
 ///
 /// \param level the ofLogLevel (and below) you want to show
-void ofSetLogLevel(ofLogLevel level);
+void OF_API_ENTRY ofSetLogLevel(ofLogLevel level);
 
 
 /// \brief Set the logging level for a specific module.
@@ -207,22 +207,22 @@ void ofSetLogLevel(ofLogLevel level);
 /// // In this case, we will see the verbose message from "MyClass", but not
 /// // the message from "MyOtherClass".
 /// ~~~~
-void ofSetLogLevel(std::string module, ofLogLevel level);
+void OF_API_ENTRY ofSetLogLevel(std::string module, ofLogLevel level);
 
 /// \brief Get the currently set global logging level.
 /// \returns The currently set global logging level.
-ofLogLevel ofGetLogLevel();
+ofLogLevel OF_API_ENTRY ofGetLogLevel();
 
 /// \brief Get the logging level for a specific module.
 /// \param module specific module name.
 /// \returns The currently set specific module logging level.
-ofLogLevel ofGetLogLevel(std::string module);
+ofLogLevel OF_API_ENTRY ofGetLogLevel(std::string module);
 
 /// \brief Get log level name as a string.
 /// \param level The ofLogLevel you want as a string.
 /// \param pad True if you want all log level names to be the same length.
 /// \returns The log level name as a string.
-std::string ofGetLogLevelName(ofLogLevel level, bool pad=false);
+std::string OF_API_ENTRY ofGetLogLevelName(ofLogLevel level, bool pad=false);
 
 /// \}
 
@@ -235,20 +235,20 @@ class ofBaseLoggerChannel;
 /// \brief Set the logging to output to a file instead of the console.
 /// \param path The path to the log file to use.
 /// \param append True if you want to append to the existing file.
-void ofLogToFile(const std::filesystem::path & path, bool append=false);
+void OF_API_ENTRY ofLogToFile(const std::filesystem::path & path, bool append=false);
 
 /// \brief Set the logging to ouptut to the console.
 /// 
 /// This is the default state and can be called to reset console logging
 /// after ofLogToFile or ofSetLoggerChannel has been called.
-void ofLogToConsole();
+void OF_API_ENTRY ofLogToConsole();
 
 #ifdef TARGET_WIN32
 /// Set the logging to ouptut to windows debug view or visual studio console
 /// 
 /// This is the default state and can be called to reset console logging
 /// after ofLogToFile or ofSetLoggerChannel has been called.
-void ofLogToDebugView();
+void OF_API_ENTRY ofLogToDebugView();
 #endif
 
 /// \brief Set the logger to use a custom logger channel.
@@ -258,10 +258,10 @@ void ofLogToDebugView();
 /// to email or even Twitter.
 ///
 /// \param loggerChannel A shared pointer to the logger channel.
-void ofSetLoggerChannel(std::shared_ptr<ofBaseLoggerChannel> loggerChannel);
+void OF_API_ENTRY ofSetLoggerChannel(std::shared_ptr<ofBaseLoggerChannel> loggerChannel);
 
 /// \brief Get the current logger channel.
-std::shared_ptr<ofBaseLoggerChannel> ofGetLoggerChannel();
+std::shared_ptr<ofBaseLoggerChannel> OF_API_ENTRY ofGetLoggerChannel();
 
 /// \}
 
@@ -295,7 +295,7 @@ std::shared_ptr<ofBaseLoggerChannel> ofGetLoggerChannel();
 // Class idea from http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&whichpage=1&#3406418
 // How to catch std::endl (which is actually a func pointer) http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html
 
-class ofLog{
+class OF_API_ENTRY ofLog{
 	public:
 	
 		/// \name Logging
@@ -536,7 +536,7 @@ class ofLog{
 /// \brief Derived log class for easy verbose logging.
 ///
 /// Example: `ofLogVerbose("Log message")`.
-class ofLogVerbose : public ofLog{
+class OF_API_ENTRY ofLogVerbose : public ofLog{
 	public:
 		/// \brief Create a verbose log message.
 		/// \param module The target module.
@@ -556,7 +556,7 @@ class ofLogVerbose : public ofLog{
 /// \brief Derived log class for easy notice logging.
 ///
 /// Example: `ofLogNotice("Log message")`.
-class ofLogNotice : public ofLog{
+class OF_API_ENTRY ofLogNotice : public ofLog{
 	public:
 		/// \brief Create a notice log message.
 		/// \param module The target module.
@@ -576,7 +576,7 @@ class ofLogNotice : public ofLog{
 /// \brief Derived log class for easy warning logging.
 ///
 /// Example: `ofLogWarning("Log message")`.
-class ofLogWarning : public ofLog{
+class OF_API_ENTRY ofLogWarning : public ofLog{
 	public:
 	/// \brief Create a verbose log message.
 	/// \param module The target module.
@@ -595,7 +595,7 @@ class ofLogWarning : public ofLog{
 /// \brief Derived log class for easy error logging.
 ///
 /// Example: `ofLogError("Log message")`.
-class ofLogError : public ofLog{
+class OF_API_ENTRY ofLogError : public ofLog{
 	public:
 		/// \brief Create a error log message.
 		/// \param module The target module.
@@ -615,7 +615,7 @@ class ofLogError : public ofLog{
 /// \brief Derived log class for easy fatal error logging.
 ///
 /// Example: `ofLogFatalError("Log message")`.
-class ofLogFatalError : public ofLog{
+class OF_API_ENTRY ofLogFatalError : public ofLog{
 	public:
 		/// \brief Create a fatal error log message.
 		/// \param module The target module.
@@ -642,7 +642,7 @@ class ofLogFatalError : public ofLog{
 ///
 /// Users can derive their own logging channels from ofBaseLoggerChannel or use
 /// default channels.
-class ofBaseLoggerChannel{
+class OF_API_ENTRY ofBaseLoggerChannel{
 public:
 	/// \brief Destroy the channel.
 	virtual ~ofBaseLoggerChannel(){};
@@ -668,7 +668,7 @@ public:
 };
 
 /// \brief A logger channel that logs its messages to the console.
-class ofConsoleLoggerChannel: public ofBaseLoggerChannel{
+class OF_API_ENTRY ofConsoleLoggerChannel: public ofBaseLoggerChannel{
 public:
 	/// \brief Destroy the console logger channel.
 	virtual ~ofConsoleLoggerChannel(){};
@@ -679,7 +679,7 @@ public:
 
 #ifdef TARGET_WIN32
 /// A logger channel that logs its messages to windows debug view and visual studio output.
-class ofDebugViewLoggerChannel : public ofBaseLoggerChannel {
+class OF_API_ENTRY ofDebugViewLoggerChannel : public ofBaseLoggerChannel {
 public:
 	/// \brief Destroy the console logger channel.
 	virtual ~ofDebugViewLoggerChannel() {};
@@ -690,7 +690,7 @@ public:
 #endif
 
 /// \brief A logger channel that logs its messages to a log file.
-class ofFileLoggerChannel: public ofBaseLoggerChannel{
+class OF_API_ENTRY ofFileLoggerChannel: public ofBaseLoggerChannel{
 public:
 	/// \brief Create an ofFileLoggerChannel.
 	ofFileLoggerChannel();

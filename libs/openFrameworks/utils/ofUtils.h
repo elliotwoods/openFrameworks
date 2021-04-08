@@ -16,7 +16,7 @@
 /// ofGetElapsedTimeMillis() and ofGetElapsedTimeMicros() to zero.
 ///
 /// \note This is called on the first frame during app startup.
-void ofResetElapsedTimeCounter();
+void OF_API_ENTRY ofResetElapsedTimeCounter();
 
 /// \brief Get the elapsed time in seconds.
 ///
@@ -25,7 +25,7 @@ void ofResetElapsedTimeCounter();
 /// program startup.
 ///
 /// \returns the floating point elapsed time in seconds.
-float ofGetElapsedTimef();
+float OF_API_ENTRY ofGetElapsedTimef();
 
 
 /// \brief Get the elapsed time in milliseconds.
@@ -35,7 +35,7 @@ float ofGetElapsedTimef();
 /// program startup.
 ///
 /// \returns the elapsed time in milliseconds (1000 milliseconds = 1 second).
-uint64_t ofGetElapsedTimeMillis();
+uint64_t OF_API_ENTRY ofGetElapsedTimeMillis();
 
 /// \brief Get the elapsed time in microseconds.
 ///
@@ -44,31 +44,31 @@ uint64_t ofGetElapsedTimeMillis();
 /// startup.
 ///
 /// \returns the elapsed time in microseconds (1000000 microseconds = 1 second).
-uint64_t ofGetElapsedTimeMicros();
+uint64_t OF_API_ENTRY ofGetElapsedTimeMicros();
 
 /// \brief Get the number of frames rendered since the program started.
 /// \returns the number of frames rendered since the program started.
-uint64_t ofGetFrameNum();
+uint64_t OF_API_ENTRY ofGetFrameNum();
 
 /// \section System Time
 /// \brief Get the seconds after the minute.
 /// \returns the seconds after the minute [0-59].
-int ofGetSeconds();
+int OF_API_ENTRY ofGetSeconds();
 
 /// \brief Get minutes after the hour.
 /// \returns the minutes after the hour [0-59].
-int ofGetMinutes();
+int OF_API_ENTRY ofGetMinutes();
 
 /// \brief Get the hour of the day.
 /// \returns the hour of the day [0-23].
-int ofGetHours();
+int OF_API_ENTRY ofGetHours();
 
 /// \brief Get the number of seconds since Midnight, January 1, 1970.
 ///
 /// Resolution is in seconds.
 ///
 /// \returns the number of seconds since Midnight, January 1, 1970 (epoch time).
-unsigned int ofGetUnixTime();
+unsigned int OF_API_ENTRY ofGetUnixTime();
 
 /// \brief Get the system time in milliseconds.
 /// \returns the system time in milliseconds.
@@ -76,14 +76,14 @@ OF_DEPRECATED_MSG("Use ofGetSystemTimeMillis() instead", uint64_t ofGetSystemTim
 
 /// \brief Get the system time in milliseconds.
 /// \returns the system time in milliseconds.
-uint64_t ofGetSystemTimeMillis();
+uint64_t OF_API_ENTRY ofGetSystemTimeMillis();
 
 /// \brief Get the system time in microseconds.
 /// \returns the system time in microseconds.
-uint64_t ofGetSystemTimeMicros();
+uint64_t OF_API_ENTRY ofGetSystemTimeMicros();
 
 
-struct ofTime{
+struct OF_API_ENTRY ofTime{
 	uint64_t seconds = 0;
 	uint64_t nanoseconds = 0;
 
@@ -137,11 +137,11 @@ struct ofTime{
 
 /// \brief Get the system time.
 /// \returns the system time.
-ofTime ofGetCurrentTime();
+ofTime OF_API_ENTRY ofGetCurrentTime();
 
 /// \brief Sleeps the current thread for the specified amount of milliseconds.
 /// \param millis The number of millseconds to sleep.
-void ofSleepMillis(int millis);
+void OF_API_ENTRY ofSleepMillis(int millis);
 
 /// \brief Formats the current system time according to the given format.
 ///
@@ -149,7 +149,7 @@ void ofSleepMillis(int millis);
 /// 2011-01-15-18-29-35-299).
 ///
 /// \returns the current time as a string with the default format.
-std::string ofGetTimestampString();
+std::string OF_API_ENTRY ofGetTimestampString();
 
 /// \brief Formats the current system time according to the given format.
 ///
@@ -186,39 +186,39 @@ std::string ofGetTimestampString();
 /// \param timestampFormat The formatting pattern.
 /// \returns the formatted timestamp as a string.
 /// \warning an invalid timestampFormat may crash windows apps.
-std::string ofGetTimestampString(const std::string& timestampFormat);
+std::string OF_API_ENTRY ofGetTimestampString(const std::string& timestampFormat);
 
 /// \brief Get the current year.
 /// \returns the current year.
-int ofGetYear();
+int OF_API_ENTRY ofGetYear();
 
 /// \brief Get the current month.
 /// \returns the current month [1-12].
-int ofGetMonth();
+int OF_API_ENTRY ofGetMonth();
 
 /// \brief Get the current day within the month.
 /// \returns the day witin the month [1-31].
-int ofGetDay();
+int OF_API_ENTRY ofGetDay();
 
 /// \brief Get the current weekday.
 ///
 /// Values 0 = Sunday, 1 = Monday, ..., 6 = Saturday.
 ///
 /// \returns the current weekday [0-6].
-int ofGetWeekday();
+int OF_API_ENTRY ofGetWeekday();
 
 /// \section Data Path
 /// \brief Enable the use of the data path.
 ///
 /// This function causes ofToDataPath() to respect the relative path set
 /// with ofSetDataPathRoot().  This is enabled by default.
-void ofEnableDataPath();
+void OF_API_ENTRY ofEnableDataPath();
 
 /// \brief Disable the use of the data path.
 ///
 /// This function causes ofToDataPath() to ignore the relative path set
 /// with ofSetDataPathRoot().
-void ofDisableDataPath();
+void OF_API_ENTRY ofDisableDataPath();
 
 /// \brief Make a path relative to the location of the data/ folder.
 ///
@@ -231,7 +231,7 @@ void ofDisableDataPath();
 /// \param path The path to make relative to the data/ folder.
 /// \param absolute Set to true to return an absolute path.
 /// \returns the new path, unless paths were disabled with ofDisableDataPath().
-std::string ofToDataPath(const std::filesystem::path & path, bool absolute=false);
+std::string OF_API_ENTRY ofToDataPath(const std::filesystem::path & path, bool absolute=false);
 
 /// \brief Reset the working directory to the platform default.
 ///
@@ -240,7 +240,7 @@ std::string ofToDataPath(const std::filesystem::path & path, bool absolute=false
 /// working directory to the resources directory in the bundle in osx. This
 /// will restore it to the exe dir or whatever was the current dir when the
 /// application was started
-bool ofRestoreWorkingDirectoryToDefault();
+bool OF_API_ENTRY ofRestoreWorkingDirectoryToDefault();
 
 /// \brief Set the relative path to the data/ folder from the executable.
 ///
@@ -250,7 +250,7 @@ bool ofRestoreWorkingDirectoryToDefault();
 ///
 /// \warning The provided path must have a trailing slash (/).
 /// \param root The path to the data/ folder relative to the app executable.
-void ofSetDataPathRoot(const std::filesystem::path& root);
+void OF_API_ENTRY ofSetDataPathRoot(const std::filesystem::path& root);
 
 
 /// \section Vectors
@@ -414,19 +414,19 @@ bool ofContains(const std::vector<T>& values, const T& target) {
 /// \param ignoreEmpty Set to true to remove empty tokens.
 /// \param trim Set to true to trim the resulting tokens.
 /// \returns A vector of strings split with the delimiter.
-std::vector<std::string> ofSplitString(const std::string& source, const std::string& delimiter, bool ignoreEmpty = false, bool trim = false);
+std::vector<std::string> OF_API_ENTRY ofSplitString(const std::string& source, const std::string& delimiter, bool ignoreEmpty = false, bool trim = false);
 
 /// \brief Join a vector of strings together into one string.
 /// \param stringElements The vector of strings to join.
 /// \param delimiter The delimiter to put betweeen each string.
-std::string ofJoinString(const std::vector<std::string>& stringElements, const std::string& delimiter);
+std::string OF_API_ENTRY ofJoinString(const std::vector<std::string>& stringElements, const std::string& delimiter);
 
 /// \brief Replace all occurrences of a string with another string.
 /// \note The input string is passed by reference, so it will be modified.
 /// \param input The string to run the replacement on.
 /// \param searchStr The string to be replaced.
 /// \param replaceStr The string to put in place.
-void ofStringReplace(std::string& input, const std::string& searchStr, const std::string& replaceStr);
+void OF_API_ENTRY ofStringReplace(std::string& input, const std::string& searchStr, const std::string& replaceStr);
 
 /// \brief Check if string contains another string.
 ///
@@ -439,12 +439,12 @@ void ofStringReplace(std::string& input, const std::string& searchStr, const std
 /// ~~~
 /// \param haystack The string to check for occurrence in.
 /// \param needle The string to check for.
-bool ofIsStringInString(const std::string& haystack, const std::string& needle);
+bool OF_API_ENTRY ofIsStringInString(const std::string& haystack, const std::string& needle);
 
 /// \brief Check how many times a string contains another string.
 /// \param haystack The string to check for occurrence in .
 /// \param needle The string to check for.
-std::size_t ofStringTimesInString(const std::string& haystack, const std::string& needle);
+std::size_t OF_API_ENTRY ofStringTimesInString(const std::string& haystack, const std::string& needle);
 
 /// \brief Converts all characters in a string to lowercase.
 ///
@@ -459,7 +459,7 @@ std::size_t ofStringTimesInString(const std::string& haystack, const std::string
 ///
 /// \param src The UTF-8 encoded string to convert to lowercase.
 /// \returns the UTF-8 encoded string as all lowercase characters.
-std::string ofToLower(const std::string& src, const std::string & locale="");
+std::string OF_API_ENTRY ofToLower(const std::string& src, const std::string & locale="");
 
 /// \brief Converts all characters in the string to uppercase.
 ///
@@ -474,7 +474,7 @@ std::string ofToLower(const std::string& src, const std::string & locale="");
 ///
 /// \param src The UTF-8 encoded string to convert to uppercase.
 /// \returns the UTF-8 encoded string as all uppercase characters.
-std::string ofToUpper(const std::string& src, const std::string & locale="");
+std::string OF_API_ENTRY ofToUpper(const std::string& src, const std::string & locale="");
 
 /// \brief Remove locale-defined whitespace from the beginning of a string.
 ///
@@ -498,7 +498,7 @@ std::string ofToUpper(const std::string& src, const std::string & locale="");
 /// \param src The original un-trimmed string.
 /// \param locale The locale for determining the definition of "spaces".
 /// \returns a front-trimmed std::string.
-std::string ofTrimFront(const std::string & src, const std::string & locale = "");
+std::string OF_API_ENTRY ofTrimFront(const std::string & src, const std::string & locale = "");
 
 /// \brief Remove locale-defined whitespace from the end of a string.
 ///
@@ -522,7 +522,7 @@ std::string ofTrimFront(const std::string & src, const std::string & locale = ""
 /// \param src The original un-trimmed string.
 /// \param locale The locale for determining the definition of "spaces".
 /// \returns a front-trimmed std::string.
-std::string ofTrimBack(const std::string & src, const std::string & locale = "");
+std::string OF_API_ENTRY ofTrimBack(const std::string & src, const std::string & locale = "");
 
 /// \brief Remove locale-defined whitespace from the beginning and end of a string.
 ///
@@ -546,7 +546,7 @@ std::string ofTrimBack(const std::string & src, const std::string & locale = "")
 /// \param src The original un-trimmed string.
 /// \param locale The locale for determining the definition of "spaces".
 /// \returns a front-trimmed std::string.
-std::string ofTrim(const std::string & src, const std::string & locale = "");
+std::string OF_API_ENTRY ofTrim(const std::string & src, const std::string & locale = "");
 
 OF_DEPRECATED_MSG("Use ofUTF8Append instead", void ofAppendUTF8(std::string & str, uint32_t utf8));
 
@@ -561,7 +561,7 @@ OF_DEPRECATED_MSG("Use ofUTF8Append instead", void ofAppendUTF8(std::string & st
 ///
 /// \param utf8 The UTF8-encoded std::string to be modified.
 /// \param codepoint The Unicode codepoint that will be converted to UTF8 and appended to \p utf8.
-void ofUTF8Append(std::string & utf8, uint32_t codepoint);
+void OF_API_ENTRY ofUTF8Append(std::string & utf8, uint32_t codepoint);
 
 /// \brief Insert a Unicode codepoint into a UTF8-encoded string at a position.
 ///
@@ -575,7 +575,7 @@ void ofUTF8Append(std::string & utf8, uint32_t codepoint);
 /// \param utf8 The string to insert a codepoint into.
 /// \param pos The codepoint position in the UTF8-encoded string.
 /// \param codepoint The codepoint to insert.
-void ofUTF8Insert(std::string & utf8, size_t pos, uint32_t codepoint);
+void OF_API_ENTRY ofUTF8Insert(std::string & utf8, size_t pos, uint32_t codepoint);
 
 /// \brief Erase a range of codepoints from a UTF8-encoded substring.
 ///
@@ -589,7 +589,7 @@ void ofUTF8Insert(std::string & utf8, size_t pos, uint32_t codepoint);
 /// \param pos The codepoint position in the UTF8-encoded string.
 /// \param len The number of codepoints starting at \pos to extract.
 /// \returns a UTF8-encoded substring.
-void ofUTF8Erase(std::string & utf8, size_t pos, size_t len);
+void OF_API_ENTRY ofUTF8Erase(std::string & utf8, size_t pos, size_t len);
 
 /// \brief Extract a range of codepoints from as a std::string.
 ///
@@ -602,7 +602,7 @@ void ofUTF8Erase(std::string & utf8, size_t pos, size_t len);
 /// \param pos The codepoint position in the UTF8-encoded string.
 /// \param len The number of codepoints starting at \pos to extract.
 /// \returns a UTF8-encoded substring.
-std::string ofUTF8Substring(const std::string & utf8, size_t pos, size_t len);
+std::string OF_API_ENTRY ofUTF8Substring(const std::string & utf8, size_t pos, size_t len);
 
 /// \brief Convert a Unicode codepoint to a UTF8-encoded std::string.
 ///
@@ -614,7 +614,7 @@ std::string ofUTF8Substring(const std::string & utf8, size_t pos, size_t len);
 ///
 /// \param codepoint The Unicode codepoint.
 /// \returns a UTF8-encoded string.
-std::string ofUTF8ToString(uint32_t codepoint);
+std::string OF_API_ENTRY ofUTF8ToString(uint32_t codepoint);
 
 /// \brief Get the number of Unicode code points in a UTF8-encoded string.
 ///
@@ -627,18 +627,18 @@ std::string ofUTF8ToString(uint32_t codepoint);
 /// \param utf8 The UTF8-encoded std::string.
 /// \returns the number of Unicode codepoints in the given string, or 0 if the
 ///          string is an invalid UTF8 string.
-size_t ofUTF8Length(const std::string & utf8);
+size_t OF_API_ENTRY ofUTF8Length(const std::string & utf8);
 
 /// \brief Convert a variable length argument to a string.
 /// \param format A printf-style format string.
 /// \returns A string representation of the argument list.
-std::string ofVAArgsToString(const char * format, ...);
+std::string OF_API_ENTRY ofVAArgsToString(const char * format, ...);
 
 /// \brief Convert a variable length argument to a string.
 /// \param format A printf-style format string.
 /// \param args A variable argument list.
 /// \returns A string representation of the argument list.
-std::string ofVAArgsToString(const char * format, va_list args);
+std::string OF_API_ENTRY ofVAArgsToString(const char * format, va_list args);
 
 /// \section String Conversion
 /// \brief Convert a value to a string.
@@ -785,7 +785,7 @@ T ofTo(const std::string & str){
 ///
 /// \param intString The string representation of the integer.
 /// \returns the integer represented by the string or 0 on failure.
-int ofToInt(const std::string& intString);
+int OF_API_ENTRY ofToInt(const std::string& intString);
 
 /// \brief Convert a string to a int64_t.
 ///
@@ -794,7 +794,7 @@ int ofToInt(const std::string& intString);
 ///
 /// \param intString The string representation of the long integer.
 /// \returns the long integer represented by the string or 0 on failure.
-int64_t ofToInt64(const std::string& intString);
+int64_t OF_API_ENTRY ofToInt64(const std::string& intString);
 
 /// \brief Convert a string to a float.
 ///
@@ -803,7 +803,7 @@ int64_t ofToInt64(const std::string& intString);
 ///
 /// \param floatString string representation of the float.
 /// \returns the float represented by the string or 0 on failure.
-float ofToFloat(const std::string& floatString);
+float OF_API_ENTRY ofToFloat(const std::string& floatString);
 
 /// \brief Convert a string to a double.
 ///
@@ -812,7 +812,7 @@ float ofToFloat(const std::string& floatString);
 ///
 /// \param doubleString The string representation of the double.
 /// \returns the double represented by the string or 0 on failure.
-double ofToDouble(const std::string& doubleString);
+double OF_API_ENTRY ofToDouble(const std::string& doubleString);
 
 /// \brief Convert a string to a boolean.
 ///
@@ -822,7 +822,7 @@ double ofToDouble(const std::string& doubleString);
 ///
 /// \param boolString The string representation of the boolean.
 /// \returns the boolean represented by the string or 0 on failure.
-bool ofToBool(const std::string& boolString);
+bool OF_API_ENTRY ofToBool(const std::string& boolString);
 
 /// \brief Converts any value to its equivalent hexadecimal representation.
 ///
@@ -864,7 +864,7 @@ std::string ofToHex(const std::string& value);
 ///
 /// \param value The value to convert to a hexadecimal string.
 /// \returns a hexadecimal string.
-std::string ofToHex(const char* value);
+std::string OF_API_ENTRY ofToHex(const char* value);
 
 /// \brief Convert a string representing an integer in hexadecimal to a string.
 ///
@@ -873,7 +873,7 @@ std::string ofToHex(const char* value);
 ///
 /// \param intHexString The string representing an integer in hexadecimal.
 /// \returns the integer represented by the string.
-int ofHexToInt(const std::string& intHexString);
+int OF_API_ENTRY ofHexToInt(const std::string& intHexString);
 
 /// \brief Convert a string representing an char in hexadecimal to a char.
 ///
@@ -882,7 +882,7 @@ int ofHexToInt(const std::string& intHexString);
 ///
 /// \param charHexString The string representing an char in hexadecimal.
 /// \returns the char represented by the string.
-char ofHexToChar(const std::string& charHexString);
+char OF_API_ENTRY ofHexToChar(const std::string& charHexString);
 
 /// \brief Convert a string representing an float in hexadecimal to a float.
 ///
@@ -891,7 +891,7 @@ char ofHexToChar(const std::string& charHexString);
 ///
 /// \param floatHexString The string representing an float in hexadecimal.
 /// \returns the float represented by the string.
-float ofHexToFloat(const std::string& floatHexString);
+float OF_API_ENTRY ofHexToFloat(const std::string& floatHexString);
 
 /// \brief Convert a string representing an string in hexadecimal to a string.
 ///
@@ -900,7 +900,7 @@ float ofHexToFloat(const std::string& floatHexString);
 ///
 /// \param stringHexString The string representing an string in hexadecimal.
 /// \returns the string represented by the string.
-std::string ofHexToString(const std::string& stringHexString);
+std::string OF_API_ENTRY ofHexToString(const std::string& stringHexString);
 
 /// \brief Convert a string representation of a char to a actual char.
 ///
@@ -911,7 +911,7 @@ std::string ofHexToString(const std::string& stringHexString);
 ///
 /// \param charString The char string to convert.
 /// \returns The string as a char or 0 on failure.
-char ofToChar(const std::string& charString);
+char OF_API_ENTRY ofToChar(const std::string& charString);
 
 /// \brief Converts any datatype value to a string of only 1s and 0s.
 ///
@@ -943,7 +943,7 @@ std::string ofToBinary(const std::string& value);
 ///
 /// \param value The c-style string to convert to a binary string.
 /// \returns a binary string.
-std::string ofToBinary(const char* value);
+std::string OF_API_ENTRY ofToBinary(const char* value);
 
 /// \brief Convert a binary string to an int.
 ///
@@ -952,7 +952,7 @@ std::string ofToBinary(const char* value);
 ///
 /// \value The binary string.
 /// \returns the integer represented by the string or 0 on failure.
-int ofBinaryToInt(const std::string& value);
+int OF_API_ENTRY ofBinaryToInt(const std::string& value);
 
 /// \brief Convert a binary string to an char.
 ///
@@ -961,7 +961,7 @@ int ofBinaryToInt(const std::string& value);
 ///
 /// \value The binary string.
 /// \returns the char represented by the string or 0 on failure.
-char ofBinaryToChar(const std::string& value);
+char OF_API_ENTRY ofBinaryToChar(const std::string& value);
 
 /// \brief Convert a binary string to a float.
 ///
@@ -970,7 +970,7 @@ char ofBinaryToChar(const std::string& value);
 ///
 /// \value The binary string.
 /// \returns the float represented by the string or 0 on failure.
-float ofBinaryToFloat(const std::string& value);
+float OF_API_ENTRY ofBinaryToFloat(const std::string& value);
 
 /// \brief Convert a binary string to ASCII characters.
 ///
@@ -979,7 +979,7 @@ float ofBinaryToFloat(const std::string& value);
 ///
 /// \value The binary string.
 /// \returns the ASCII string represented by the string.
-std::string ofBinaryToString(const std::string& value);
+std::string OF_API_ENTRY ofBinaryToString(const std::string& value);
 
 /// \section openFrameworks Version
 /// \brief Get the current version of openFrameworks as a string.
@@ -988,7 +988,7 @@ std::string ofBinaryToString(const std::string& value);
 ///
 /// \sa http://semver.org/
 /// \returns The string representation of the version (e.g. `0.9.0`).
-std::string ofGetVersionInfo();
+std::string OF_API_ENTRY ofGetVersionInfo();
 
 /// \brief Get the major version number of openFrameworks.
 ///
@@ -996,7 +996,7 @@ std::string ofGetVersionInfo();
 ///
 /// \sa http://semver.org/
 /// \returns The major version number.
-unsigned int ofGetVersionMajor();
+unsigned int OF_API_ENTRY ofGetVersionMajor();
 
 /// \brief Get the minor version number of openFrameworks.
 ///
@@ -1004,7 +1004,7 @@ unsigned int ofGetVersionMajor();
 ///
 /// \sa http://semver.org/
 /// \returns The minor version number.
-unsigned int ofGetVersionMinor();
+unsigned int OF_API_ENTRY ofGetVersionMinor();
 
 /// \brief Get the patch version number of openFrameworks.
 ///
@@ -1012,7 +1012,7 @@ unsigned int ofGetVersionMinor();
 ///
 /// \sa http://semver.org/
 /// \returns The patch version number.
-unsigned int ofGetVersionPatch();
+unsigned int OF_API_ENTRY ofGetVersionPatch();
 
 /// \brief Get the pre-release version of openFrameworks.
 ///
@@ -1025,7 +1025,7 @@ unsigned int ofGetVersionPatch();
 ///
 /// \sa http://semver.org/
 /// \returns The pre-release version string.
-std::string ofGetVersionPreRelease();
+std::string OF_API_ENTRY ofGetVersionPreRelease();
 
 
 /// \section Frame Saving
@@ -1039,7 +1039,7 @@ std::string ofGetVersionPreRelease();
 /// The output file type will be deduced from the given file name.
 ///
 /// \param filename The image output file.
-void ofSaveScreen(const std::string& filename);
+void OF_API_ENTRY ofSaveScreen(const std::string& filename);
 
 /// \brief Saves the current frame as a PNG image.
 ///
@@ -1047,14 +1047,14 @@ void ofSaveScreen(const std::string& filename);
 /// The count will be restarted each time the program is restarted.
 ///
 /// \param bUseViewport Set to true if the current viewport should be used.
-void ofSaveFrame(bool bUseViewport = false);
+void OF_API_ENTRY ofSaveFrame(bool bUseViewport = false);
 
 /// \brief Saves the current viewport as an image.
 ///
 /// The output file type will be deduced from the given file name.
 ///
 /// \param filename The image output file.
-void ofSaveViewport(const std::string& filename);
+void OF_API_ENTRY ofSaveViewport(const std::string& filename);
 
 
 /// \section System
@@ -1065,25 +1065,25 @@ void ofSaveViewport(const std::string& filename);
 /// \param uriEncodeQuery true if the query parameters in the given URL have
 /// already been URL encoded.
 #ifndef TARGET_EMSCRIPTEN
-void ofLaunchBrowser(const std::string& url, bool uriEncodeQuery=false);
+void OF_API_ENTRY ofLaunchBrowser(const std::string& url, bool uriEncodeQuery=false);
 #endif
 
 /// \brief Executes a system command. Similar to run a command in terminal.
 ///
 /// \note Will block until the executed program/command has finished.
 /// \returns the system command output as string.
-std::string ofSystem(const std::string& command);
+std::string OF_API_ENTRY ofSystem(const std::string& command);
 
 /// \brief Get the target platform of the current system.
 ///
 /// \returns the current ofTargetPlatform.
-ofTargetPlatform ofGetTargetPlatform();
+ofTargetPlatform OF_API_ENTRY ofGetTargetPlatform();
 
 /// \brief Get the value of a given environment variable.
 ///
 /// \note The available environment variables differ between operating systems.
 /// \returns the environmnt variable's value or an empty string if not found.
-std::string ofGetEnv(const std::string & var);
+std::string OF_API_ENTRY ofGetEnv(const std::string & var);
 
 /// \brief Iterate through each Unicode codepoint in a UTF8-encoded std::string.
 ///
@@ -1108,7 +1108,7 @@ std::string ofGetEnv(const std::string & var);
 ///     std::string invalidUTF8String = "...";
 ///     ofLog() << (ofUTF8Iterator(invalidUTF8String).begin() == ofUTF8Iterator(invalidUTF8String).end()); // Returns true.
 /// ~~~~
-class ofUTF8Iterator{
+class OF_API_ENTRY ofUTF8Iterator{
 public:
 	/// \brief Create a ofUTF8Iterator for a given UTF8-encoded string.
 	///
@@ -1140,9 +1140,9 @@ private:
 /*! \cond PRIVATE */
 namespace of{
 namespace priv{
-    void setWorkingDirectoryToDefault();
-    void initutils();
-    void endutils();
+    void OF_API_ENTRY setWorkingDirectoryToDefault();
+    void OF_API_ENTRY initutils();
+    void OF_API_ENTRY endutils();
 }
 }
 /*! \endcond */

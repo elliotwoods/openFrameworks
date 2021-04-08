@@ -4,7 +4,7 @@
 #include "ofUtils.h"
 #include <queue>
 
-class ofFpsCounter {
+class OF_API_ENTRY ofFpsCounter {
 public:
 	ofFpsCounter();
 	ofFpsCounter(double targetFps);

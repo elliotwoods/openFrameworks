@@ -26,15 +26,15 @@ extern "C" {
 // ---------------------------------------------------------------------------- SOUND SYSTEM FMOD
 
 // --------------------- global functions:
-void ofFmodSoundStopAll();
-void ofFmodSoundSetVolume(float vol);
-void ofFmodSoundUpdate();						// calls FMOD update.
-float * ofFmodSoundGetSpectrum(int nBands);		// max 512...
-void ofFmodSetBuffersize(unsigned int bs);
+void OF_API_ENTRY ofFmodSoundStopAll();
+void OF_API_ENTRY ofFmodSoundSetVolume(float vol);
+void OF_API_ENTRY ofFmodSoundUpdate();						// calls FMOD update.
+float * OF_API_ENTRY ofFmodSoundGetSpectrum(int nBands);		// max 512...
+void OF_API_ENTRY ofFmodSetBuffersize(unsigned int bs);
 
 
 // --------------------- player functions:
-class ofFmodSoundPlayer : public ofBaseSoundPlayer {
+class OF_API_ENTRY ofFmodSoundPlayer : public ofBaseSoundPlayer {
 
 	public:
 

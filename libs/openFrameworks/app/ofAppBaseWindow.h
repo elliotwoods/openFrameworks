@@ -18,7 +18,7 @@ struct _XDisplay;
 typedef struct _XDisplay Display;
 #endif
 
-class ofAppBaseWindow{
+class OF_API_ENTRY ofAppBaseWindow{
 
 public:
 
@@ -103,7 +103,7 @@ public:
 #endif
 };
 
-class ofAppBaseGLWindow: public ofAppBaseWindow{
+class OF_API_ENTRY ofAppBaseGLWindow: public ofAppBaseWindow{
 public:
 	virtual ~ofAppBaseGLWindow(){}
 	virtual void setup(const ofGLWindowSettings & settings)=0;
@@ -117,7 +117,7 @@ public:
 	}
 };
 
-class ofAppBaseGLESWindow: public ofAppBaseWindow{
+class OF_API_ENTRY ofAppBaseGLESWindow: public ofAppBaseWindow{
 public:
 	virtual ~ofAppBaseGLESWindow(){}
 	virtual void setup(const ofGLESWindowSettings & settings)=0;

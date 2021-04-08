@@ -155,7 +155,7 @@ enum ofPixelFormat: short{
 template<typename T>
 std::string ofToString(const T & v);
 template<>
-std::string ofToString(const ofPixelFormat & pixelType);
+std::string OF_API_ENTRY ofToString(const ofPixelFormat & pixelType);
 
 enum ofImageType: short;
 

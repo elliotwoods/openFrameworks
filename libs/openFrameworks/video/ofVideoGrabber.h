@@ -46,7 +46,7 @@
 	#define OF_VID_GRABBER_TYPE ofxEmscriptenVideoGrabber
 #endif
 
-class ofVideoGrabber : public ofBaseVideoGrabber,public ofBaseVideoDraws{
+class OF_API_ENTRY ofVideoGrabber : public ofBaseVideoGrabber,public ofBaseVideoDraws{
 
 	public :
 

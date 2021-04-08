@@ -15,7 +15,7 @@ class ofFbo;
 class ofVbo;
 static const int OF_NO_TEXTURE=-1;
 
-class ofGLProgrammableRenderer: public ofBaseGLRenderer{
+class OF_API_ENTRY ofGLProgrammableRenderer: public ofBaseGLRenderer{
 public:
     ofGLProgrammableRenderer(const ofAppBaseWindow * window);
 

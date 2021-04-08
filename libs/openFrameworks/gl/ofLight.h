@@ -24,18 +24,18 @@ enum ofLightType {
 	OF_LIGHT_AREA=3 // Only programmable renderer
 };
 
-void ofEnableLighting();
-void ofDisableLighting();
-void ofEnableSeparateSpecularLight();
-void ofDisableSeparateSpecularLight();
-bool ofGetLightingEnabled();
-void ofSetSmoothLighting(bool b);
-void ofSetGlobalAmbientColor(const ofFloatColor& c);
-const ofFloatColor & ofGetGlobalAmbientColor();
+void OF_API_ENTRY ofEnableLighting();
+void OF_API_ENTRY ofDisableLighting();
+void OF_API_ENTRY ofEnableSeparateSpecularLight();
+void OF_API_ENTRY ofDisableSeparateSpecularLight();
+bool OF_API_ENTRY ofGetLightingEnabled();
+void OF_API_ENTRY ofSetSmoothLighting(bool b);
+void OF_API_ENTRY ofSetGlobalAmbientColor(const ofFloatColor& c);
+const ofFloatColor & OF_API_ENTRY ofGetGlobalAmbientColor();
 
 //----------------------------------------
 // Use the public API of ofNode for all transformations
-class ofLight : public ofNode {
+class OF_API_ENTRY ofLight : public ofNode {
 public:
 	ofLight();
 	
@@ -116,4 +116,4 @@ private:
 };
 
 
-std::vector<std::weak_ptr<ofLight::Data> > & ofLightsData();
+std::vector<std::weak_ptr<ofLight::Data> > & OF_API_ENTRY ofLightsData();

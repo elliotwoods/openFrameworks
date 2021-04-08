@@ -107,7 +107,7 @@ struct ofMaterialSettings {
 /// \brief material parameter properties that can be applied to vertices in the OpenGL lighting model
 /// used in determining both the intensity and color of reflected light based on the lighting model in use
 /// and if the vertices are on a front or back sided face
-class ofBaseMaterial{
+class OF_API_ENTRY ofBaseMaterial{
 public:
 
 	virtual ~ofBaseMaterial(){};
@@ -159,7 +159,7 @@ public:
 /// \brief material parameter properties that can be applied to vertices in the OpenGL lighting model
 /// used in determining both the intensity and color of reflected light based on the lighting model in use
 /// and if the vertices are on a front or back sided face
-class ofMaterial: public ofBaseMaterial {
+class OF_API_ENTRY ofMaterial: public ofBaseMaterial {
 public:
 	ofMaterial();
 	virtual ~ofMaterial(){};

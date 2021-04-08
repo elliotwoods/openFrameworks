@@ -31,7 +31,7 @@ void OF_API_ENTRY ofDisableSeparateSpecularLight();
 bool OF_API_ENTRY ofGetLightingEnabled();
 void OF_API_ENTRY ofSetSmoothLighting(bool b);
 void OF_API_ENTRY ofSetGlobalAmbientColor(const ofFloatColor& c);
-const ofFloatColor & OF_API_ENTRY ofGetGlobalAmbientColor();
+const ofFloatColor OF_API_ENTRY & ofGetGlobalAmbientColor();
 
 //----------------------------------------
 // Use the public API of ofNode for all transformations
@@ -116,4 +116,4 @@ private:
 };
 
 
-std::vector<std::weak_ptr<ofLight::Data> > & OF_API_ENTRY ofLightsData();
+std::vector<std::weak_ptr<ofLight::Data> > OF_API_ENTRY & ofLightsData();

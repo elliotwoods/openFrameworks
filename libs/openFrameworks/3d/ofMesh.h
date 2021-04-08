@@ -76,7 +76,7 @@ class ofMeshFace_;
 /// }
 /// ~~~~
 template<class V, class N, class C, class T>
-class OF_API_ENTRY ofMesh_{
+class ofMesh_{
 public:
 
 	/// \name Construction

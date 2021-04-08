@@ -93,7 +93,7 @@ void OF_API_ENTRY ofRemoveAllURLRequests();
 /// \brief stop & remove all active and waiting HTTP requests
 void OF_API_ENTRY ofStopURLLoader();
 
-ofEvent<ofHttpResponse> & OF_API_ENTRY ofURLResponseEvent();
+ofEvent<ofHttpResponse> OF_API_ENTRY & ofURLResponseEvent();
 
 template<class T>
 void ofRegisterURLNotification(T * obj){

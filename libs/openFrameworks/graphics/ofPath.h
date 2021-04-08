@@ -30,7 +30,7 @@
 /// ~~~~{.cpp}
 /// path.setMode(POLYLINES);
 /// ~~~~
-class OF_API_ENTRY ofPath{
+class ofPath{
 public:
 	/// \name Create and remove paths and sub paths
 	/// \{

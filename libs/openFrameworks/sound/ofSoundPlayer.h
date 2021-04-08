@@ -23,7 +23,7 @@ void OF_API_ENTRY ofSoundUpdate();
 /// \warning This isn't implemented on mobile & embedded platforms.
 /// \param nBands number of spectrum bands to return, max 512.
 /// \return pointer to an FFT sample, sample size is equal to the nBands parameter.
-float * OF_API_ENTRY ofSoundGetSpectrum(int nBands);
+float OF_API_ENTRY * ofSoundGetSpectrum(int nBands);
 
 
 

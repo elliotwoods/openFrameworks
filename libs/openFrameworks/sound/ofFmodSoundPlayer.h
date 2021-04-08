@@ -29,7 +29,7 @@ extern "C" {
 void OF_API_ENTRY ofFmodSoundStopAll();
 void OF_API_ENTRY ofFmodSoundSetVolume(float vol);
 void OF_API_ENTRY ofFmodSoundUpdate();						// calls FMOD update.
-float * OF_API_ENTRY ofFmodSoundGetSpectrum(int nBands);		// max 512...
+float OF_API_ENTRY * ofFmodSoundGetSpectrum(int nBands);		// max 512...
 void OF_API_ENTRY ofFmodSetBuffersize(unsigned int bs);
 
 

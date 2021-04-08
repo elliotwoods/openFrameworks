@@ -493,8 +493,6 @@ std::unique_ptr<T> make_unique(Args&&... args) {
 #	else
 #		define OF_API_ENTRY
 #	endif
-#	define OF_API_IGNORE
 #else
 #	define OF_API_ENTRY
-#	define OF_API_IGNORE
 #endif

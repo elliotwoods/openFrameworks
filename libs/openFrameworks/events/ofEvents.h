@@ -431,7 +431,7 @@ private:
 bool OF_API_ENTRY ofSendMessage(ofMessage msg);
 bool OF_API_ENTRY ofSendMessage(std::string messageString);
 
-ofCoreEvents & OF_API_ENTRY ofEvents();
+ofCoreEvents OF_API_ENTRY & ofEvents();
 
 template<class ListenerClass>
 void ofRegisterMouseEvents(ListenerClass * listener, int prio=OF_EVENT_ORDER_AFTER_APP){

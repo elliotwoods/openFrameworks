@@ -715,13 +715,13 @@ inline void ofColor_<PixelType>::setHex (int hexColor, float alpha){
 }
 
 
-extern template class OF_API_ENTRY ofColor_<char>;
-extern template class OF_API_ENTRY ofColor_<unsigned char>;
-extern template class OF_API_ENTRY ofColor_<short>;
-extern template class OF_API_ENTRY ofColor_<unsigned short>;
-extern template class OF_API_ENTRY ofColor_<int>;
-extern template class OF_API_ENTRY ofColor_<unsigned int>;
-extern template class OF_API_ENTRY ofColor_<long>;
-extern template class OF_API_ENTRY ofColor_<unsigned long>;
-extern template class OF_API_ENTRY ofColor_<float>;
-extern template class OF_API_ENTRY ofColor_<double>;
+extern template class ofColor_<char>;
+extern template class ofColor_<unsigned char>;
+extern template class ofColor_<short>;
+extern template class ofColor_<unsigned short>;
+extern template class ofColor_<int>;
+extern template class ofColor_<unsigned int>;
+extern template class ofColor_<long>;
+extern template class ofColor_<unsigned long>;
+extern template class ofColor_<float>;
+extern template class ofColor_<double>;

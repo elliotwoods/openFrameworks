@@ -50,7 +50,7 @@ void OF_API_ENTRY ofRunApp(std::shared_ptr<ofAppBaseWindow> window, std::shared_
 int OF_API_ENTRY ofRunMainLoop();
 
 
-ofBaseApp * OF_API_ENTRY ofGetAppPtr();
+ofBaseApp OF_API_ENTRY * ofGetAppPtr();
 
 void		OF_API_ENTRY ofExit(int status=0);
 
@@ -93,7 +93,7 @@ float OF_API_ENTRY ofRandomHeight();
 bool		OF_API_ENTRY ofDoesHWOrientation();
 glm::vec2	OF_API_ENTRY ofGetWindowSize();
 ofRectangle	OF_API_ENTRY ofGetWindowRect();
-ofAppBaseWindow * OF_API_ENTRY ofGetWindowPtr();
+ofAppBaseWindow OF_API_ENTRY * ofGetWindowPtr();
 std::shared_ptr<ofAppBaseWindow> OF_API_ENTRY ofGetCurrentWindow();
 
 void 		OF_API_ENTRY ofSetWindowPosition(int x, int y);
@@ -106,9 +106,9 @@ void		OF_API_ENTRY ofToggleFullscreen();
 //-------------------------- sync
 void 		OF_API_ENTRY ofSetVerticalSync(bool bSync);
 
-ofCoreEvents & OF_API_ENTRY ofEvents();
+ofCoreEvents OF_API_ENTRY & ofEvents();
 void OF_API_ENTRY ofSetCurrentRenderer(std::shared_ptr<ofBaseRenderer> renderer,bool setDefaults=false);
-std::shared_ptr<ofBaseRenderer> & OF_API_ENTRY ofGetCurrentRenderer();
+std::shared_ptr<ofBaseRenderer> OF_API_ENTRY & ofGetCurrentRenderer();
 void OF_API_ENTRY ofSetEscapeQuitsApp(bool bQuitOnEsc);
 
 //-------------------------- native window handles

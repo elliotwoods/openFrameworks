@@ -79,12 +79,12 @@ template<class T>
 OF_DEPRECATED_MSG("Use ofGetGLFormat() instead", int ofGetGlFormat(const ofPixels_<T> & pixels));
 
 template<class T>
-int OF_API_ENTRY ofGetGlFormat(const ofPixels_<T> & pixels) {
+int ofGetGlFormat(const ofPixels_<T> & pixels) {
 	return ofGetGLFormatFromPixelFormat(pixels.getPixelFormat());
 }
 
 template<class T>
-int OF_API_ENTRY ofGetGLFormat(const ofPixels_<T> & pixels) {
+int ofGetGLFormat(const ofPixels_<T> & pixels) {
     return ofGetGLFormatFromPixelFormat(pixels.getPixelFormat());
 }
 
